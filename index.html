@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="th"><head>
+<meta charset="UTF-8"><style id="qw-theme">:root {
+  --color-bg: #faf9fc !important;
+  --color-text: #131920 !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: #b400aa !important;
+  --highlight-selected-bg-color: #006400 !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+  --flow-size-overview-canvas-min-height: 480px !important;
+  --chat-column-max: 720px !important;
+  --color-navbar-bg: #f9f9fb !important;
+  --color-navbar-fg: #131920 !important;
+  --color-navbar-fg-muted: color-mix(in srgb, #131920 65%, #f9f9fb) !important;
+  --color-navbar-divider: #0000001f !important;
+  --color-leftnav-bg: #f9f9fb !important;
+  --color-bg-chat-view: #f9f9fb !important;
+  --color-bg-secondary: #fff !important;
+  --color-bg-tertiary: #f9fafb !important;
+  --color-bg-hover: #f3f4f6 !important;
+  --color-surface: #f9fafb !important;
+  --color-surface-hover: #f3f4f6 !important;
+  --color-surface-active: #e5e7eb !important;
+  --color-border: #0000001f !important;
+  --color-border-light: #0000000f !important;
+  --color-border-strong: #d1d5db !important;
+  --background-toggle-off-default: #fff0 !important;
+  --color-primary: #4200db !important;
+  --color-primary-dark: #35009e !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: #e8e6ff !important;
+  --color-primary-hover-border: #35009e !important;
+  --color-nav-icon-active: #4200db !important;
+  --color-nav-hover-border: #4200db !important;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-focus-ring: #4200db !important;
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent) !important;
+  --block-selected-outline: 1px solid #8575ff !important;
+  --block-selection-outline-offset: 2px !important;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-accent: #4200db !important;
+  --color-accent-foreground: #4200db !important;
+  --color-accent-dark: #35009e !important;
+  --color-accent-light: #e8e6ff !important;
+  --color-accent-inverse: #fff !important;
+  --color-link: #4200db !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-brand-kiro: #9147ff !important;
+  --color-primary-gradient-end: #e8e6ff !important;
+  --color-primary-bg-solid: #e8e6ff !important;
+  --color-user-bubble: #f3f3f7 !important;
+  --color-user-bubble-text: #131920 !important;
+  --color-text-secondary: #5e5e5e !important;
+  --color-text-tertiary: #656871 !important;
+  --color-text-muted: #656871 !important;
+  --color-text-on-primary: #fff !important;
+  --color-success: #00802f !important;
+  --color-success-dark: #00471e !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #e6f5eb !important;
+  --color-success-border: #b3d9bf !important;
+  --color-success-foreground: #00802f !important;
+  --color-success-dark-foreground: #00471e !important;
+  --color-success-text: #00471e !important;
+  --color-error: #db0000 !important;
+  --color-error-dark: #700000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #ffe0e0 !important;
+  --color-error-bg: #fceaea !important;
+  --color-error-border: #f2cccc !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #db0000 !important;
+  --color-error-dark-foreground: #700000 !important;
+  --color-error-inverse: #fff !important;
+  --color-error-text: #700000 !important;
+  --color-warning: #f2b100 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #fef7e6 !important;
+  --color-warning-border: #f9dfa3 !important;
+  --color-warning-foreground: #f2b100 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #006ce0 !important;
+  --color-info-dark: #002a66 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #ebf3fc !important;
+  --color-info-border: #b3d1f0 !important;
+  --color-info-foreground: #006ce0 !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #fff !important;
+  --color-overlay: #00000080 !important;
+  --color-shadow: #00000014 !important;
+  --color-hover: #0000000d !important;
+  --color-tooltip-bg: #000000d9 !important;
+  --color-tooltip-text: #fff !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #db0000 !important;
+  --color-voice-red-dark: #700000 !important;
+  --color-voice-amber: #f2b100 !important;
+  --color-voice-purple-glow: #4200db66 !important;
+  --color-voice-red-glow: #db000066 !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px #0000000d !important;
+  --shadow-md: 0 4px 12px #00000014 !important;
+  --shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
+  --color-success-bg-solid: #d9ffd6 !important;
+  --color-error-bg-solid: #ffe0e0 !important;
+  --color-error-border-solid: #ffe0e0 !important;
+  --color-warning-bg-solid: #fffbbd !important;
+  --color-warning-text: #573a00 !important;
+  --color-info-bg-solid: #d1f1ff !important;
+  --color-info-bg-solid-alt: #d1f1ff !important;
+  --color-info-text: #002a66 !important;
+  --color-info-text-alt: #002a66 !important;
+  --color-emerald: #10b981 !important;
+  --color-teal: #4ecdc4 !important;
+  --color-code-bg: #f3f3f7 !important;
+  --color-code-header-bg: #f1f3f5 !important;
+  --color-code-text: #24292e !important;
+  --color-code-border: #e1e4e8 !important;
+  --color-code-muted: #6a737d !important;
+  --color-inline-code-bg: #f3f3f7 !important;
+  --color-inline-code-text: #24292e !important;
+  --color-inline-code-border: #e1e4e8 !important;
+  --color-scrollbar-thumb: #d1d5db !important;
+  --color-scrollbar-track: transparent !important;
+  --color-graph-node-text: #333 !important;
+  --color-graph-node-text-dim: #7f8c8d !important;
+  --color-graph-edge-default: #95a5a6 !important;
+  --color-graph-edge-cross: #e67e22 !important;
+  --color-graph-edge-text: #666 !important;
+  --color-graph-edge-stroke: #fff !important;
+  --color-graph-highlight-bg: #ff6b6b !important;
+  --color-graph-highlight-border: #e74c3c !important;
+  --color-graph-search-bg: gold !important;
+  --color-graph-search-border: orange !important;
+  --color-graph-focus-border: #c0392b !important;
+  --color-graph-external-border: #95a5a6 !important;
+  --color-graph-selected-border: #4200db !important;
+  --qs-data-cat-01: #4338ca !important;
+  --qs-data-cat-02: #d97706 !important;
+  --qs-data-cat-03: #0891b2 !important;
+  --qs-data-cat-04: #8b5cf6 !important;
+  --qs-data-cat-05: #15803d !important;
+  --qs-data-cat-06: #0c4a6e !important;
+  --qs-data-cat-07: #d946ef !important;
+  --qs-data-cat-08: #65a30d !important;
+  --qs-data-cat-09: #1d4ed8 !important;
+  --qs-data-cat-10: #831843 !important;
+  --qs-data-cat-11: #c2410c !important;
+  --qs-data-cat-12: #115e59 !important;
+  --qs-data-cat-other: #737373 !important;
+  --color-graph-cat-person: #4338ca !important;
+  --color-graph-cat-module: #4338ca !important;
+  --color-graph-cat-organization: #d97706 !important;
+  --color-graph-cat-org: #d97706 !important;
+  --color-graph-cat-variable: #d97706 !important;
+  --color-graph-cat-column: #d97706 !important;
+  --color-graph-cat-project: #0891b2 !important;
+  --color-graph-cat-sheet: #0891b2 !important;
+  --color-graph-cat-url: #0891b2 !important;
+  --color-graph-cat-product: #8b5cf6 !important;
+  --color-graph-cat-class: #8b5cf6 !important;
+  --color-graph-cat-dashboard: #8b5cf6 !important;
+  --color-graph-cat-place: #15803d !important;
+  --color-graph-cat-location: #15803d !important;
+  --color-graph-cat-function: #15803d !important;
+  --color-graph-cat-event: #0c4a6e !important;
+  --color-graph-cat-date: #0c4a6e !important;
+  --color-graph-cat-service: #0c4a6e !important;
+  --color-graph-cat-creativework: #d946ef !important;
+  --color-graph-cat-doc: #d946ef !important;
+  --color-graph-cat-message: #65a30d !important;
+  --color-graph-cat-channel: #65a30d !important;
+  --color-graph-cat-email: #65a30d !important;
+  --color-graph-cat-visual: #65a30d !important;
+  --color-graph-cat-file: #1d4ed8 !important;
+  --color-graph-cat-file-aggregate: #1d4ed8 !important;
+  --color-graph-cat-code: #1d4ed8 !important;
+  --color-graph-cat-decision: #831843 !important;
+  --color-graph-cat-action: #831843 !important;
+  --color-graph-cat-observation: #831843 !important;
+  --color-graph-cat-metric: #831843 !important;
+  --color-graph-cat-topic: #c2410c !important;
+  --color-graph-cat-concept: #c2410c !important;
+  --color-graph-cat-definedterm: #c2410c !important;
+  --color-graph-cat-instruction: #c2410c !important;
+  --color-graph-cat-import: #c2410c !important;
+  --color-graph-cat-dataset: #115e59 !important;
+  --color-graph-cat-occupation: #115e59 !important;
+  --color-graph-cat-method: #115e59 !important;
+  --color-graph-cat-folder: #737373 !important;
+  --color-graph-cat-unknown: #737373 !important;
+  --color-graph-rel-contains: #bdc3c7 !important;
+  --color-graph-rel-extends: #9b59b6 !important;
+  --color-graph-rel-implements: #3498db !important;
+  --color-graph-rel-imports: #e67e22 !important;
+  --color-graph-rel-uses: #2ecc71 !important;
+  --color-graph-rel-calls: #27ae60 !important;
+  --color-graph-rel-references: #f39c12 !important;
+  --color-graph-rel-related-to: #95a5a6 !important;
+  --color-graph-rel-works-on: #e74c3c !important;
+  --color-graph-rel-owns: #1abc9c !important;
+  --color-graph-rel-depends-on: #e67e22 !important;
+  --color-graph-rel-parent-of: #bdc3c7 !important;
+  --qs-content: #fff !important;
+  --qs-main: #fff !important;
+  --qs-primary-foreground: #131920 !important;
+  --qs-secondary-foreground: #656871 !important;
+  --qs-tertiary-foreground: #656871 !important;
+  --qs-placeholder-foreground: #656871 !important;
+  --qs-divider: #dedee3 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #b4b4bb !important;
+  --qs-neutral-gray-50: #f9fafb !important;
+  --qs-tertiary-background: #f9fafb !important;
+  --qs-action-hover: #f3f3f7 !important;
+  --qs-primary-default: #4200db !important;
+  --qs-primary-dark: #35009e !important;
+  --qs-primary-light: #e8e6ff !important;
+  --qs-primary-inverse: #fff !important;
+  --qs-success-default: #00802f !important;
+  --qs-success-dark: #00471e !important;
+  --qs-error-default: #db0000 !important;
+  --qs-warning-default: #f2b100 !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --safe-top: 0px !important;
+  --safe-bottom: 0px !important;
+  --safe-left: 0px !important;
+  --safe-right: 0px !important;
+  --qs-action-active: #e8e6ff !important;
+  --qs-action-disabled: #f3f3f7 !important;
+  --qs-active-border: #4200db !important;
+  --qs-application-navbar: #4200db !important;
+  --qs-application-navbar-dark: #35009e !important;
+  --qs-application-navbar-foreground: #fff !important;
+  --qs-application-navbar-light: #e8e6ff !important;
+  --qs-automation-dark: #660052 !important;
+  --qs-automation-default: #d600ba !important;
+  --qs-automation-light: #ffe0fb !important;
+  --qs-automation-medium: #b3008f !important;
+  --qs-automation-soft: #ff94f1 !important;
+  --qs-avatar-blue-bg: #d1f1ff !important;
+  --qs-avatar-blue-fg: #002a66 !important;
+  --qs-avatar-fuchsia-bg: #fce6ff !important;
+  --qs-avatar-fuchsia-fg: #590066 !important;
+  --qs-avatar-green-bg: #d9ffd6 !important;
+  --qs-avatar-green-fg: #00471e !important;
+  --qs-avatar-neutral-bg: #dedee3 !important;
+  --qs-avatar-neutral-fg: #131920 !important;
+  --qs-avatar-orange-bg: #ffe0d6 !important;
+  --qs-avatar-orange-fg: #661800 !important;
+  --qs-avatar-pink-bg: #ffe0fb !important;
+  --qs-avatar-pink-fg: #660052 !important;
+  --qs-avatar-primary-bg: #e8e6ff !important;
+  --qs-avatar-primary-fg: #35009e !important;
+  --qs-avatar-red-bg: #ffe0e0 !important;
+  --qs-avatar-red-fg: #700000 !important;
+  --qs-avatar-violet-bg: #f2e5ff !important;
+  --qs-avatar-violet-fg: #45008a !important;
+  --qs-avatar-yellow-bg: #fffbbd !important;
+  --qs-avatar-yellow-fg: #573a00 !important;
+  --qs-brand: #fff !important;
+  --qs-brand-foreground: #131920 !important;
+  --qs-brand-navbar: #131920 !important;
+  --qs-brand-navbar-dark: #000 !important;
+  --qs-brand-navbar-foreground: #fff !important;
+  --qs-brand-navbar-light: #dedee3 !important;
+  --qs-coachmark: #006ce0 !important;
+  --qs-connection-dark: #661800 !important;
+  --qs-connection-default: #db3300 !important;
+  --qs-connection-light: #ffe0d6 !important;
+  --qs-connection-soft: #ff997a !important;
+  --qs-content-inverse: #333843 !important;
+  --qs-content-inverse-active: #131920 !important;
+  --qs-contrast-foreground: #131920 !important;
+  --qs-data-categorical-01: #4338ca !important;
+  --qs-data-categorical-02: #d97706 !important;
+  --qs-data-categorical-03: #0891b2 !important;
+  --qs-data-categorical-04: #8b5cf6 !important;
+  --qs-data-categorical-05: #15803d !important;
+  --qs-data-categorical-06: #0c4a6e !important;
+  --qs-data-categorical-07: #d946ef !important;
+  --qs-data-categorical-08: #65a30d !important;
+  --qs-data-categorical-09: #1d4ed8 !important;
+  --qs-data-categorical-10: #831843 !important;
+  --qs-data-categorical-11: #c2410c !important;
+  --qs-data-categorical-12: #115e59 !important;
+  --qs-data-categorical-other: #737373 !important;
+  --qs-data-divergent-negative: #ea580c !important;
+  --qs-data-divergent-positive: #4f46e5 !important;
+  --qs-data-divergent-red-green-negative: #dc2626 !important;
+  --qs-data-divergent-red-green-positive: #16a34a !important;
+  --qs-data-missing: #d4d4d4 !important;
+  --qs-data-sentiment-neutral: #737373 !important;
+  --qs-data-sentiment-warning: #9e6900 !important;
+  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
+  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
+  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
+  --qs-default-badge: #b4b4bb !important;
+  --qs-default-badge-dot: #656871 !important;
+  --qs-dimension: #4200db !important;
+  --qs-dimension-experimental: #4200db !important;
+  --qs-dimension-experimental-foreground: #4200db !important;
+  --qs-dimension-foreground: #fff !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #dedee3 !important;
+  --qs-disabled-foreground: #b4b4bb !important;
+  --qs-divider-light: #f3f3f7 !important;
+  --qs-error-active-border: #db0000 !important;
+  --qs-error-border: #ffe0e0 !important;
+  --qs-error-dark: #700000 !important;
+  --qs-error-foreground: #db0000 !important;
+  --qs-error-inverse: #fff !important;
+  --qs-error-light: #ffe0e0 !important;
+  --qs-error-medium: #900 !important;
+  --qs-error-soft: #ff9e9e !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
+  --qs-hover-border: #333843 !important;
+  --qs-info-dark: #002a66 !important;
+  --qs-info-default: #006ce0 !important;
+  --qs-info-inverse: #fff !important;
+  --qs-info-light: #d1f1ff !important;
+  --qs-info-medium: #003b8f !important;
+  --qs-info-soft: #75cfff !important;
+  --qs-insight-dark: #590066 !important;
+  --qs-insight-default: #a000b8 !important;
+  --qs-insight-light: #fce6ff !important;
+  --qs-insight-soft: #f299ff !important;
+  --qs-main-foreground: #131920 !important;
+  --qs-main-secondary-foreground: #656871 !important;
+  --qs-measure: #00802f !important;
+  --qs-measure-experimental: #f2b100 !important;
+  --qs-measure-experimental-foreground: #f2b100 !important;
+  --qs-measure-foreground: #fff !important;
+  --qs-neutral-black: #000 !important;
+  --qs-neutral-dark: #333843 !important;
+  --qs-neutral-deep: #656871 !important;
+  --qs-neutral-default: #dedee3 !important;
+  --qs-neutral-light: #f3f3f7 !important;
+  --qs-neutral-lightest: #f9f9fb !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #131920 !important;
+  --qs-neutral-white: #fff !important;
+  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
+  --qs-primary-inverse-foreground: #fff !important;
+  --qs-primary-medium: #8575ff !important;
+  --qs-primary-soft: #b2a8ff !important;
+  --qs-secondary: #dedee3 !important;
+  --qs-secondary-dark: #b4b4bb !important;
+  --qs-secondary-light: #f3f3f7 !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-inverse: #fff !important;
+  --qs-success-light: #d9ffd6 !important;
+  --qs-success-medium: #005c26 !important;
+  --qs-success-soft: #aeffa8 !important;
+  --qs-tag-default: #dedee3 !important;
+  --qs-tag-soft-border: #b4b4bb !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #45008a !important;
+  --qs-visualization-default: #7300e5 !important;
+  --qs-visualization-light: #f2e5ff !important;
+  --qs-visualization-soft: #d4a8ff !important;
+  --qs-warning-dark: #573a00 !important;
+  --qs-warning-experimental: #f2b100 !important;
+  --qs-warning-experimental-light: #fffbbd !important;
+  --qs-warning-experimental-light-foreground: #fffbbd !important;
+  --qs-warning-inverse: #573a00 !important;
+  --qs-warning-light: #fffbbd !important;
+  --qs-warning-medium: #db9200 !important;
+  --qs-warning-soft: #ffed4d !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --z-subtask-modal: 10000 !important;
+  --z-above-subtask-modal: 10001 !important;
+}</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANTATAT Frontline Candidate Assessment</title>
+<style>
+:root{
+  --bg:#f6f3ee; --card:#ffffff; --card2:#f3efe8; --line:#e4ddd1;
+  --txt:#4c4543; --muted:#7d7f75; --accent:#5b6a86; --accent2:#47526a;
+  --good:#5e7d6a; --warn:#da9770; --bad:#b4595b;
+  --eq:#5b6a86; --iq:#7d7f75; --aq:#da9770;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,"Sarabun",Tahoma,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:20px 16px 80px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:34px;width:auto;display:block}
+.brandfallback{font-size:22px;font-weight:800;letter-spacing:1px;color:var(--txt)}
+h1{font-size:19px;margin:0}
+.sub{color:var(--muted);font-size:13px;margin-top:2px}
+.modebtns{display:flex;gap:8px}
+.mode{padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);
+  color:var(--muted);cursor:pointer;font-size:14px;font-weight:600}
+.mode.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;border-color:transparent}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(20,25,45,.04)}
+.card h2{font-size:16px;margin:0 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+input,select,textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);
+  background:var(--card);color:var(--txt);font-size:14px;font-family:inherit}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+.q{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px;background:var(--card2)}
+.qtop{display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px}
+.b-eq{background:rgba(91,106,134,.16);color:#5b6a86}
+.b-iq{background:rgba(125,127,117,.18);color:#5f6157}
+.b-aq{background:rgba(218,151,112,.20);color:#b06a40}
+.b-val{background:rgba(176,197,188,.30);color:#4f6a60}
+.qno{font-weight:800;color:var(--muted);font-size:13px}
+.qtext{font-weight:600;margin-bottom:12px}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 12px;border:1px solid var(--line);
+  border-radius:10px;margin-bottom:8px;cursor:pointer;background:var(--card);transition:.15s}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);background:rgba(91,106,134,.10)}
+.opt input{width:auto;margin-top:3px}
+.opt .ol{font-weight:700;color:var(--muted);min-width:18px}
+.btn{padding:12px 20px;border-radius:12px;border:none;cursor:pointer;font-size:15px;font-weight:700;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:var(--card2);border:1px solid var(--line);color:var(--txt)}
+.btn.sm{padding:8px 14px;font-size:13px}
+.progress{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;margin-bottom:10px}
+.bar{height:8px;background:var(--card2);border-radius:999px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0%}
+.phint{font-size:12px;color:var(--muted);margin-top:6px}
+.hidden{display:none}
+.result-code{font-family:ui-monospace,Consolas,monospace;font-size:13px;word-break:break-all;
+  background:var(--card2);border:1px dashed var(--line);border-radius:10px;padding:12px;margin-top:10px}
+.note{font-size:12px;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.kpi .n{font-size:30px;font-weight:800}
+.kpi .l{font-size:12px;color:var(--muted);margin-top:2px}
+.lvl{display:inline-block;padding:5px 12px;border-radius:999px;font-weight:700;font-size:13px}
+.l-strong{background:rgba(94,125,106,.18);color:#466352}
+.l-suit{background:rgba(91,106,134,.16);color:#5b6a86}
+.l-mix{background:rgba(218,151,112,.20);color:#b06a40}
+.l-need{background:rgba(180,89,91,.16);color:#9c4648}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+.dimbar{height:8px;background:var(--card2);border-radius:999px;overflow:hidden;min-width:90px}
+.dimbar>i{display:block;height:100%}
+.ans-correct{color:var(--good);font-weight:700}
+.ans-wrong{color:var(--bad)}
+.ans-partial{color:var(--warn)}
+.flex{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.spread{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.pill{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--card2);border:1px solid var(--line);color:var(--muted)}
+.pill.timer{font-weight:800;color:#466352;background:rgba(94,125,106,.14);border-color:rgba(94,125,106,.3)}
+.pill.timer.warn{color:#b06a40;background:rgba(218,151,112,.18);border-color:rgba(218,151,112,.4)}
+.pill.timer.danger{color:#9c4648;background:rgba(180,89,91,.14);border-color:rgba(180,89,91,.4)}
+.lock{text-align:center;padding:30px}
+.lock .ico{font-size:40px}
+.footer{color:var(--muted);font-size:11px;text-align:center;margin-top:20px}
+.valrow{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.valname{min-width:110px;font-weight:700}
+.status{padding:10px 12px;border-radius:10px;font-size:13px;margin-top:10px}
+.status.ok{background:rgba(94,125,106,.14);color:#466352;border:1px solid rgba(94,125,106,.3)}
+.status.err{background:rgba(180,89,91,.12);color:#9c4648;border:1px solid rgba(180,89,91,.3)}
+.status.info{background:rgba(91,106,134,.12);color:#5b6a86;border:1px solid rgba(91,106,134,.3)}
+.rowlink{cursor:pointer}
+.rowlink:hover{background:var(--card2)}
+
+@media(max-width:640px){#filterBar{grid-template-columns:1fr 1fr !important}}
+@media print {
+  body * { visibility: hidden !important; }
+  #hrResult, #hrResult * { visibility: visible !important; }
+  #hrResult { position: absolute !important; left: 0; top: 0; width: 100%; }
+  #csvBtn, #printBtn { display: none !important; }
+  body { background: #fff !important; }
+  .card { box-shadow: none !important; border: 1px solid #ccc !important; page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <img class="logo" src="data:image/png;base64,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" alt="TANTATAT" onerror="this.style.display='none';document.getElementById('brandFallback').style.display='block'">
+      <div class="brandfallback" id="brandFallback" style="display:none">TANTATAT</div>
+      <div>
+        <h1>TANTATAT Frontline Candidate Assessment</h1>
+        <div class="sub">แบบประเมิน EQ / IQ / AQ · 30 ข้อ · ~25–30 นาที</div>
+      </div>
+    </div>
+    <div class="modebtns">
+      <button class="mode active" id="mCand" type="button">ผู้สมัคร</button>
+      <button class="mode" id="mHR" type="button">HR Admin</button>
+    </div>
+  </header>
+
+  <!-- CANDIDATE -->
+  <section id="candView">
+    <div class="card" id="introCard">
+      <h2>ข้อมูลผู้สมัคร</h2>
+      <div class="grid2">
+        <div><label>ชื่อ-นามสกุล <span style="color:var(--bad)">*</span></label><input id="cName" placeholder="กรอกทั้งชื่อและนามสกุล เช่น สมชาย ใจดี"></div>
+        <div><label>ตำแหน่งที่สมัคร (Role Profile)</label><select id="cRole"></select><input id="cRoleOther" class="hidden" style="margin-top:8px" placeholder="ระบุตำแหน่งที่สมัคร"></div>
+      </div>
+      <p class="note" style="margin-top:14px">เลือกคำตอบที่ใกล้เคียงกับตัวคุณมากที่สุดเพียง 1 ข้อ · คุณจะไม่เห็นคะแนนหรือเฉลย ผลจะถูกส่งให้ฝ่าย HR โดยอัตโนมัติ</p>
+      <div style="margin-top:16px"><button class="btn" id="startBtn" type="button">เริ่มทำแบบทดสอบ</button></div>
+    </div>
+
+    <div id="testCard" class="hidden">
+      <div class="progress">
+        <div class="spread"><strong id="pcount">0 / 30</strong>
+          <div class="flex" style="gap:8px">
+            <span class="pill" id="pleft">เหลืออีก 30 ข้อ</span>
+            <span class="pill timer" id="timer">⏱ 30:00</span>
+          </div></div>
+        <div class="bar"><i id="pbar"></i></div>
+        <div class="phint">ระบบบันทึกคำตอบให้อัตโนมัติ (กันเผลอปิดหน้า) · มีเวลาทำ 30 นาที · หมดเวลาระบบจะส่งอัตโนมัติ</div>
+      </div>
+      <div id="questions"></div>
+      <div class="card">
+        <div class="spread">
+          <div class="note">ตรวจสอบว่าตอบครบทุกข้อแล้ว ระบบจะไม่แสดงคะแนนให้ผู้สมัคร</div>
+          <button class="btn" id="submitBtn" type="button" disabled="">ส่งคำตอบ</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="doneCard" class="card hidden">
+      <h2>✅ ส่งแบบทดสอบเรียบร้อย</h2>
+      <p>ขอบคุณ <strong id="doneName"></strong> คำตอบของคุณถูกส่งให้ฝ่าย HR เรียบร้อยแล้ว</p>
+      <div id="sendStatus"></div>
+      <div id="backupBox" class="hidden">
+        <p class="note" style="margin-top:14px">หากระบบส่งอัตโนมัติไม่สำเร็จ กรุณาส่งรหัสสำรองนี้ให้ HR:</p>
+        <div class="result-code" id="resultCode"></div>
+        <div style="margin-top:10px" class="flex">
+          <button class="btn ghost sm" id="copyBtn" type="button">คัดลอกรหัส</button>
+          <button class="btn ghost sm" id="dlBtn" type="button">ดาวน์โหลดไฟล์ผล</button>
+          <span class="note" id="copyMsg"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HR ADMIN -->
+  <section id="hrView" class="hidden">
+    <div class="card" id="hrLockCard">
+      <div class="lock">
+        <div class="ico">🔒</div>
+        <h2>HR Admin Access</h2>
+        <p class="note">ส่วนนี้แสดงคะแนน เฉลย และ Decision Support สำหรับ HR เท่านั้น</p>
+        <div style="max-width:280px;margin:14px auto 0"><input id="hrPass" type="password" placeholder="รหัสผ่าน HR"></div>
+        <div style="margin-top:12px"><button class="btn" id="hrLoginBtn" type="button">เข้าสู่ระบบ</button></div>
+        <p class="note" id="hrErr" style="color:var(--bad);margin-top:10px"></p>
+      </div>
+    </div>
+
+    <div id="hrPanel" class="hidden">
+      <div class="card" id="hrListCard">
+        <div class="spread">
+          <h2 style="margin:0">ผู้สมัครทั้งหมด (จาก Google Sheet)</h2>
+          <div class="flex">
+            <button class="btn ghost sm" id="reloadBtn" type="button">โหลดรายชื่อ</button>
+            <button class="btn ghost sm" id="manualBtn" type="button">วางรหัสด้วยมือ</button>
+          </div>
+        </div>
+        <div id="listStatus" class="note" style="margin-top:8px">กด "โหลดรายชื่อ" เพื่อดึงข้อมูลล่าสุดจาก Sheet</div>
+        <div id="filterBar" class="hidden" style="margin-top:12px;display:grid;grid-template-columns:1.4fr 1fr 1fr 0.9fr 1fr;gap:8px">
+          <input id="fSearch" placeholder="ค้นหาชื่อผู้สมัคร...">
+          <select id="fRole"><option value="">ทุกตำแหน่ง</option></select>
+          <select id="fLevel">
+            <option value="">ทุกระดับผล</option>
+            <option value="Strong signal">Strong signal</option>
+            <option value="Suitable signal">Suitable signal</option>
+            <option value="Mixed signal">Mixed signal</option>
+            <option value="Needs validation">Needs validation</option>
+          </select>
+          <select id="fScore">
+            <option value="0">คะแนนทั้งหมด</option>
+            <option value="80">Overall ≥ 80</option>
+            <option value="65">Overall ≥ 65</option>
+            <option value="50">Overall ≥ 50</option>
+          </select>
+          <select id="fSort">
+            <option value="date_desc">ล่าสุดก่อน</option>
+            <option value="date_asc">เก่าสุดก่อน</option>
+            <option value="overall_desc">คะแนนมาก→น้อย</option>
+            <option value="overall_asc">คะแนนน้อย→มาก</option>
+            <option value="name_asc">ชื่อ ก→ฮ</option>
+          </select>
+        </div>
+        <div id="filterCount" class="note hidden" style="margin-top:8px"></div>
+        <div id="candList" style="overflow-x:auto;margin-top:10px"></div>
+      </div>
+
+      <div class="card hidden" id="manualCard">
+        <h2>ประมวลผลจากรหัสสำรอง (ออฟไลน์)</h2>
+        <label>วางรหัสผลลัพธ์ (Result Code) จากผู้สมัคร แล้วกดประมวลผล</label>
+        <textarea id="hrCodeIn" rows="3" style="font-family:ui-monospace,monospace;font-size:12px" placeholder="วางรหัสผลลัพธ์ที่ขึ้นต้นด้วย TANTER1:"></textarea>
+        <div style="margin-top:12px" class="flex">
+          <button class="btn sm" id="procBtn" type="button">ประมวลผล</button>
+          <button class="btn ghost sm" id="fileBtn" type="button">โหลดจากไฟล์</button>
+          <input id="fileIn" type="file" accept=".txt,.json" class="hidden">
+        </div>
+        <p class="note" id="hrProcErr" style="color:var(--bad);margin-top:8px"></p>
+      </div>
+
+      <div id="hrResult" class="hidden"></div>
+    </div>
+  </section>
+
+  <div class="footer">แบบประเมินภายในเพื่อประกอบการพิจารณา ไม่ใช่แบบทดสอบมาตรฐานหรือทางคลินิก · ใช้ร่วมกับ Structured Interview, Work Trial และ Reference Check เสมอ</div>
+</div>
+
+<iframe name="sinkFrame" id="sinkFrame" style="display:none"></iframe>
+
+<script>
+// ========================================================
+//  TANTATAT Assessment — CONFIG (แก้ไฟล์นี้ไฟล์เดียวพอ)
+// ========================================================
+window.ASSESSMENT_CONFIG = {
+
+  // (1) วาง URL ของ Google Apps Script Web App (ลงท้ายด้วย /exec)
+  SHEET_ENDPOINT: "https://script.google.com/macros/s/AKfycby4InmZA29pSC20FoeaZQS7dwcZdkFWs89X37tbq_j5GM9WMd8PjXevSbSZt53iPK4_/exec",
+
+  // (2) รหัสผ่านสำหรับหน้า HR Admin
+  HR_PASSWORD: "2468"
+
+};
+
+</script>
+<script>
+window.ASSESSMENT_DATA = {
+  "questions": [
+    {
+      "no": 1,
+      "dim": "EQ",
+      "value": "BOLD",
+      "q": "ลูกค้าไม่พอใจและพูดเสียงดัง คุณจะทำอย่างไร",
+      "options": [
+        "เถียงเพื่ออธิบายว่าตนไม่ผิด",
+        "เงียบและเดินออกไป",
+        "ตั้งใจฟัง พูดสุภาพ และขอข้อมูลเพื่อช่วยแก้ปัญหา",
+        "เรียกเพื่อนมารับเรื่องแทนทันที"
+      ]
+    },
+    {
+      "no": 2,
+      "dim": "EQ",
+      "value": "CRAFTED",
+      "q": "เห็นลูกค้าสูงอายุเดินเข้ามาและดูสับสน คุณจะทำอย่างไร",
+      "options": [
+        "รอให้ลูกค้าเดินมาถามเอง",
+        "เข้าไปทักทาย ถามความต้องการ และช่วยพาไปจุดบริการ",
+        "ชี้ทางจากระยะไกล",
+        "ทำงานของตนต่อเพราะยังไม่มีใครเรียก"
+      ]
+    },
+    {
+      "no": 3,
+      "dim": "EQ",
+      "value": "CRAFTED",
+      "q": "เพื่อนร่วมงานทำผิดพลาดเล็กน้อยต่อหน้าลูกค้า คุณจะทำอย่างไร",
+      "options": [
+        "ตำหนิเพื่อนทันที",
+        "ช่วยแก้สถานการณ์ก่อน แล้วคุยกับเพื่อนเป็นการส่วนตัว",
+        "ทำเป็นไม่เห็น",
+        "เล่าให้คนอื่นฟังหลังเลิกงาน"
+      ]
+    },
+    {
+      "no": 4,
+      "dim": "EQ",
+      "value": "BOLD",
+      "q": "คุณทำข้อมูลนัดหมายผิดและเพิ่งตรวจพบ คุณจะทำอย่างไร",
+      "options": [
+        "รีบแจ้งหัวหน้า ยอมรับข้อผิดพลาด และช่วยแก้ไข",
+        "แก้เงียบ ๆ โดยไม่บอกใคร",
+        "รอดูว่าจะมีคนพบหรือไม่",
+        "บอกว่าเป็นความผิดของระบบ"
+      ]
+    },
+    {
+      "no": 5,
+      "dim": "EQ",
+      "value": "CRAFTED",
+      "q": "ลูกค้าถามเรื่องที่คุณยังไม่แน่ใจ คุณจะตอบอย่างไร",
+      "options": [
+        "ตอบตามที่คิดว่าน่าจะใช่",
+        "บอกว่าไม่ทราบแล้วจบการสนทนา",
+        "แจ้งว่าจะตรวจสอบกับผู้รับผิดชอบและกลับมาให้ข้อมูลที่ถูกต้อง",
+        "ส่งลูกค้าไปถามคนอื่นเอง"
+      ]
+    },
+    {
+      "no": 6,
+      "dim": "EQ",
+      "value": "CRAFTED",
+      "q": "งานหน้าเคาน์เตอร์เข้ามาพร้อมกันหลายเรื่อง คุณจะทำอย่างไร",
+      "options": [
+        "ทำเรื่องที่ง่ายก่อนเสมอ",
+        "ตั้งสติ จัดลำดับตามความเร่งด่วน และแจ้งลูกค้าที่ต้องรอ",
+        "ทำทุกเรื่องพร้อมกัน",
+        "หยุดรับงานจนกว่างานเดิมจะเสร็จ"
+      ]
+    },
+    {
+      "no": 7,
+      "dim": "EQ",
+      "value": "PROGRESSIVE",
+      "q": "หัวหน้าแนะนำวิธีทำงานใหม่ที่เร็วกว่าเดิม คุณจะทำอย่างไร",
+      "options": [
+        "ลองทำตามและถามเมื่อไม่เข้าใจ",
+        "ใช้วิธีเดิมเพราะคุ้นเคยกว่า",
+        "บอกว่าวิธีใหม่ยุ่งยาก",
+        "รอให้เพื่อนทำก่อนหลายวัน"
+      ]
+    },
+    {
+      "no": 8,
+      "dim": "EQ",
+      "value": "BOLD",
+      "q": "เพื่อนร่วมงานพูดกับคุณไม่ดีต่อหน้าคนอื่น คุณจะทำอย่างไร",
+      "options": [
+        "พูดแรงกลับทันที",
+        "เก็บไว้และไม่คุยกับเพื่อนอีก",
+        "ตั้งสติ ทำงานให้จบ แล้วคุยกันตรง ๆ อย่างสุภาพ",
+        "โพสต์ระบายในกลุ่ม"
+      ]
+    },
+    {
+      "no": 9,
+      "dim": "EQ",
+      "value": "CRAFTED",
+      "q": "ลูกค้ามาถึงช้ากว่าเวลานัดและกังวลว่าจะไม่ได้รับบริการ คุณจะทำอย่างไร",
+      "options": [
+        "บอกว่าเป็นความผิดของลูกค้า",
+        "รับฟัง ตรวจสอบตาราง และอธิบายทางเลือกให้ชัดเจน",
+        "ให้ลูกค้ารอโดยไม่แจ้งเวลา",
+        "รับปากว่าจะได้ทำทันทีทั้งที่ยังไม่ตรวจสอบ"
+      ]
+    },
+    {
+      "no": 10,
+      "dim": "EQ",
+      "value": "PROGRESSIVE",
+      "q": "คุณได้รับ Feedback ว่าพูดกับลูกค้าเร็วเกินไป คุณจะทำอย่างไร",
+      "options": [
+        "คิดว่าลูกค้าต้องตั้งใจฟังเอง",
+        "ขอตัวอย่าง ทดลองพูดช้าลง และขอ Feedback อีกครั้ง",
+        "รับฟังแต่ไม่เปลี่ยน",
+        "หลีกเลี่ยงการพูดกับลูกค้า"
+      ]
+    },
+    {
+      "no": 11,
+      "dim": "IQ",
+      "value": "CRAFTED",
+      "q": "ค่าบริการ 1,200 บาท ลูกค้าจ่าย 1,500 บาท ต้องทอนเท่าไร",
+      "options": [
+        "200 บาท",
+        "300 บาท",
+        "400 บาท",
+        "500 บาท"
+      ]
+    },
+    {
+      "no": 12,
+      "dim": "IQ",
+      "value": "BOLD",
+      "q": "นัดเวลา 13:30 น. ใช้บริการประมาณ 45 นาที ควรเสร็จประมาณกี่โมง",
+      "options": [
+        "13:45 น.",
+        "14:00 น.",
+        "14:15 น.",
+        "14:30 น."
+      ]
+    },
+    {
+      "no": 13,
+      "dim": "IQ",
+      "value": "CRAFTED",
+      "q": "มีลูกค้านัด 8 คน ยกเลิก 2 คน เหลือกี่คน",
+      "options": [
+        "5 คน",
+        "6 คน",
+        "7 คน",
+        "10 คน"
+      ]
+    },
+    {
+      "no": 14,
+      "dim": "IQ",
+      "value": "CRAFTED",
+      "q": "ถุงมือ 1 กล่องมี 50 คู่ ใช้ไป 18 คู่ เหลือกี่คู่",
+      "options": [
+        "22 คู่",
+        "28 คู่",
+        "32 คู่",
+        "38 คู่"
+      ]
+    },
+    {
+      "no": 15,
+      "dim": "IQ",
+      "value": "CRAFTED",
+      "q": "ข้อใดควรทำก่อนเปิดให้บริการ",
+      "options": [
+        "ตรวจความพร้อมของพื้นที่และอุปกรณ์ตาม Checklist",
+        "รอให้ลูกค้าคนแรกมาถึง",
+        "คุยเรื่องส่วนตัวกับเพื่อน",
+        "เปิดเพลงก่อนตรวจพื้นที่"
+      ]
+    },
+    {
+      "no": 16,
+      "dim": "IQ",
+      "value": "CRAFTED",
+      "q": "ลูกค้านัด 10:00 น. ควรมาถึงก่อน 15 นาที คือเวลาใด",
+      "options": [
+        "09:15 น.",
+        "09:30 น.",
+        "09:45 น.",
+        "10:15 น."
+      ]
+    },
+    {
+      "no": 17,
+      "dim": "IQ",
+      "value": "CRAFTED",
+      "q": "ข้อใดเป็นข้อมูลส่วนบุคคลที่ไม่ควรบอกคนนอก",
+      "options": [
+        "เวลาเปิดคลินิก",
+        "ชื่อและประวัติการรักษาของลูกค้า",
+        "ที่อยู่สาขา",
+        "เบอร์โทรศัพท์คลินิก"
+      ]
+    },
+    {
+      "no": 18,
+      "dim": "IQ",
+      "value": "PROGRESSIVE",
+      "q": "ถ้าขั้นตอนใหม่ช่วยลดเวลารอลูกค้า สิ่งใดเหมาะสมที่สุด",
+      "options": [
+        "ทดลองใช้ตามคำแนะนำและบันทึกปัญหาที่พบ",
+        "ปฏิเสธเพราะไม่คุ้นเคย",
+        "เปลี่ยนขั้นตอนเองทั้งหมด",
+        "ใช้เฉพาะเวลาหัวหน้าอยู่"
+      ]
+    },
+    {
+      "no": 19,
+      "dim": "IQ",
+      "value": "PROGRESSIVE",
+      "q": "หมายเลขคิวเรียง 21, 22, 23, __ หมายเลขถัดไปคือข้อใด",
+      "options": [
+        "20",
+        "24",
+        "25",
+        "32"
+      ]
+    },
+    {
+      "no": 20,
+      "dim": "IQ",
+      "value": "PROGRESSIVE",
+      "q": "หากข้อมูลในระบบไม่ตรงกับใบนัด ควรทำอย่างไร",
+      "options": [
+        "เลือกข้อมูลที่จำได้",
+        "ตรวจสอบเอกสารและถามผู้รับผิดชอบก่อนยืนยัน",
+        "แก้ข้อมูลเองโดยไม่แจ้ง",
+        "ปล่อยผ่านเพราะเป็นเรื่องเล็ก"
+      ]
+    },
+    {
+      "no": 21,
+      "dim": "AQ",
+      "value": "BOLD",
+      "q": "วันแรกของงาน คุณยังจำขั้นตอนไม่ครบ คุณจะทำอย่างไร",
+      "options": [
+        "แกล้งทำเป็นเข้าใจ",
+        "ถามผู้สอน จดขั้นตอน และทบทวนหลังงาน",
+        "รอให้เพื่อนทำแทน",
+        "หยุดทำงานที่ไม่มั่นใจทั้งหมด"
+      ]
+    },
+    {
+      "no": 22,
+      "dim": "AQ",
+      "value": "BOLD",
+      "q": "ช่วงลูกค้าเยอะ คุณถูกขอให้ช่วยงานที่ไม่ใช่งานประจำ คุณจะทำอย่างไร",
+      "options": [
+        "ปฏิเสธทันที",
+        "ช่วยตามที่ทำได้และแจ้งหากต้องการคำแนะนำ",
+        "บ่นให้เพื่อนฟัง",
+        "ทำโดยไม่ถามแม้ไม่รู้วิธี"
+      ]
+    },
+    {
+      "no": 23,
+      "dim": "AQ",
+      "value": "BOLD",
+      "q": "คุณมาสายเพราะรถติด คุณจะทำอย่างไร",
+      "options": [
+        "ไม่แจ้งเพราะใกล้ถึงแล้ว",
+        "แจ้งหัวหน้าทันที บอกเวลาที่คาดว่าจะถึง และวางแผนป้องกันครั้งต่อไป",
+        "บอกเพื่อนให้ลงเวลาแทน",
+        "โทษสภาพจราจรอย่างเดียว"
+      ]
+    },
+    {
+      "no": 24,
+      "dim": "AQ",
+      "value": "BOLD",
+      "q": "ลูกค้ารอนานและเริ่มไม่พอใจ แต่คุณยังแก้ปัญหาไม่ได้ คุณจะทำอย่างไร",
+      "options": [
+        "หลบไม่ให้ลูกค้าเห็น",
+        "แจ้งสถานะตามจริง ขอโทษ และประสานผู้รับผิดชอบ",
+        "บอกให้รอต่อโดยไม่อธิบาย",
+        "รับปากเวลาที่ไม่แน่ใจ"
+      ]
+    },
+    {
+      "no": 25,
+      "dim": "AQ",
+      "value": "BOLD",
+      "q": "เพื่อนขอให้คุณข้ามขั้นตอนความปลอดภัยเพื่อให้งานเร็วขึ้น คุณจะทำอย่างไร",
+      "options": [
+        "ทำตามเพราะเป็นเรื่องเล็ก",
+        "ปฏิเสธอย่างสุภาพและทำตามมาตรฐาน",
+        "ทำเฉพาะครั้งนี้",
+        "ให้เพื่อนเป็นคนรับผิดชอบแทน"
+      ]
+    },
+    {
+      "no": 26,
+      "dim": "AQ",
+      "value": "PROGRESSIVE",
+      "q": "คุณทำงานช้ากว่าเพื่อนในช่วงเริ่มงาน คุณจะทำอย่างไร",
+      "options": [
+        "ยอมแพ้เพราะไม่ถนัด",
+        "ขอคำแนะนำ ฝึกซ้ำ และตั้งเป้าปรับให้ดีขึ้น",
+        "ทำแบบเดิมต่อไป",
+        "เร่งจนข้ามขั้นตอน"
+      ]
+    },
+    {
+      "no": 27,
+      "dim": "AQ",
+      "value": "PROGRESSIVE",
+      "q": "เมื่อมีการเปลี่ยนตารางงานกะทันหัน คุณจะทำอย่างไร",
+      "options": [
+        "โกรธและไม่ยอมเปลี่ยน",
+        "ตรวจสอบผลกระทบ ปรับแผน และแจ้งปัญหาที่จำเป็น",
+        "ไม่อ่านตารางใหม่",
+        "ให้เพื่อนจัดการแทน"
+      ]
+    },
+    {
+      "no": 28,
+      "dim": "AQ",
+      "value": "PROGRESSIVE",
+      "q": "คุณสอบหรือประเมินทักษะไม่ผ่านครั้งแรก คุณจะทำอย่างไร",
+      "options": [
+        "คิดว่าไม่เหมาะกับงานนี้",
+        "ถามจุดที่ต้องปรับ ฝึกเพิ่มเติม และขอประเมินใหม่",
+        "โทษข้อสอบ",
+        "ไม่พูดถึงผลประเมิน"
+      ]
+    },
+    {
+      "no": 29,
+      "dim": "AQ",
+      "value": "PROGRESSIVE",
+      "q": "อุปกรณ์ที่ใช้ประจำมีปัญหาระหว่างงาน คุณจะทำอย่างไร",
+      "options": [
+        "ฝืนใช้ต่อไป",
+        "หยุดใช้ตามความเหมาะสม แจ้งผู้รับผิดชอบ และใช้อุปกรณ์สำรองตามขั้นตอน",
+        "ซ่อมเองทันทีแม้ไม่รู้วิธี",
+        "เก็บไว้ให้กะถัดไปจัดการ"
+      ]
+    },
+    {
+      "no": 30,
+      "dim": "AQ",
+      "value": "PROGRESSIVE",
+      "q": "หลังจบวันที่งานยุ่งมาก คุณจะทำอย่างไร",
+      "options": [
+        "กลับทันทีโดยไม่ตรวจอะไร",
+        "ตรวจงานค้าง สรุปปัญหา และคิดว่าครั้งหน้าจะเตรียมตัวอย่างไร",
+        "บ่นว่าเป็นวันที่แย่",
+        "จำไว้แต่ไม่แจ้งใคร"
+      ]
+    }
+  ],
+  "scoring": {
+    "1": {
+      "dim": "EQ",
+      "scores": [
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "2": {
+      "dim": "EQ",
+      "scores": [
+        2,
+        4,
+        3,
+        1
+      ]
+    },
+    "3": {
+      "dim": "EQ",
+      "scores": [
+        1,
+        4,
+        3,
+        2
+      ]
+    },
+    "4": {
+      "dim": "EQ",
+      "scores": [
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    "5": {
+      "dim": "EQ",
+      "scores": [
+        1,
+        2,
+        4,
+        3
+      ]
+    },
+    "6": {
+      "dim": "EQ",
+      "scores": [
+        2,
+        4,
+        3,
+        1
+      ]
+    },
+    "7": {
+      "dim": "EQ",
+      "scores": [
+        4,
+        2,
+        1,
+        3
+      ]
+    },
+    "8": {
+      "dim": "EQ",
+      "scores": [
+        1,
+        2,
+        4,
+        1
+      ]
+    },
+    "9": {
+      "dim": "EQ",
+      "scores": [
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    "10": {
+      "dim": "EQ",
+      "scores": [
+        1,
+        4,
+        2,
+        1
+      ]
+    },
+    "11": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "12": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "13": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "14": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "15": {
+      "dim": "IQ",
+      "scores": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "16": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    "17": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "18": {
+      "dim": "IQ",
+      "scores": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "19": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "20": {
+      "dim": "IQ",
+      "scores": [
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "21": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    "22": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    "23": {
+      "dim": "AQ",
+      "scores": [
+        2,
+        4,
+        1,
+        2
+      ]
+    },
+    "24": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    "25": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        1
+      ]
+    },
+    "26": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        1
+      ]
+    },
+    "27": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        2
+      ]
+    },
+    "28": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        1,
+        2
+      ]
+    },
+    "29": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        1
+      ]
+    },
+    "30": {
+      "dim": "AQ",
+      "scores": [
+        1,
+        4,
+        2,
+        3
+      ]
+    }
+  },
+  "roles": [
+    {
+      "name": "Frontline General",
+      "EQ": 0.4,
+      "IQ": 0.25,
+      "AQ": 0.35
+    },
+    {
+      "name": "Dental Assistant (ผู้ช่วยทันตแพทย์)",
+      "EQ": 0.35,
+      "IQ": 0.3,
+      "AQ": 0.35
+    },
+    {
+      "name": "Customer Service (เจ้าหน้าที่บริการลูกค้า)",
+      "EQ": 0.45,
+      "IQ": 0.2,
+      "AQ": 0.35
+    },
+    {
+      "name": "Customer Care (เจ้าหน้าที่ดูแลลูกค้า)",
+      "EQ": 0.45,
+      "IQ": 0.25,
+      "AQ": 0.3
+    },
+    {
+      "name": "Branch Keeper (แม่บ้าน)",
+      "EQ": 0.35,
+      "IQ": 0.25,
+      "AQ": 0.4
+    },
+    {
+      "name": "Treatment Advisor (ที่ปรึกษาทางทันตกรรม)",
+      "EQ": 0.45,
+      "IQ": 0.25,
+      "AQ": 0.3
+    },
+    {
+      "name": "Senior Dental Assistant (ผู้ช่วยทันตแพทย์อาวุโส)",
+      "EQ": 0.35,
+      "IQ": 0.25,
+      "AQ": 0.4
+    }
+  ],
+  "bands": [
+    {
+      "min": 80,
+      "level": "Strong signal",
+      "interp": "มีแนวโน้มเหมาะสม ควรยืนยันด้วยการสัมภาษณ์และทดลองงาน"
+    },
+    {
+      "min": 65,
+      "level": "Suitable signal",
+      "interp": "เหมาะสมเบื้องต้น ตรวจสอบประเด็นที่คะแนนต่ำ"
+    },
+    {
+      "min": 50,
+      "level": "Mixed signal",
+      "interp": "ควรถามเพิ่มหรือใช้ Work Trial ก่อนตัดสินใจ"
+    },
+    {
+      "min": 0,
+      "level": "Needs validation",
+      "interp": "มีความเสี่ยง ควรตรวจสอบด้วยหลักฐานอื่น ไม่ใช้คะแนนเพียงอย่างเดียว"
+    }
+  ],
+  "values": [
+    {
+      "value": "BOLD",
+      "def": "รับผิดชอบ กล้าพูดความจริง กล้าขอความช่วยเหลือ และยืนหยัดในมาตรฐาน"
+    },
+    {
+      "value": "CRAFTED",
+      "def": "ใส่ใจลูกค้า รายละเอียด ความสะอาด ความถูกต้อง และคุณภาพงาน"
+    },
+    {
+      "value": "PROGRESSIVE",
+      "def": "พร้อมเรียนรู้ รับ Feedback ปรับตัว และพัฒนาวิธีทำงาน"
+    }
+  ],
+  "dimmax": {
+    "EQ": 40,
+    "IQ": 10,
+    "AQ": 40
+  }
+};
+
+</script>
+<script>
+/* TANTATAT Frontline Candidate Assessment — app logic */
+(function () {
+  "use strict";
+
+  var DATA = window.ASSESSMENT_DATA || {};
+  var CONFIG = window.ASSESSMENT_CONFIG || { SHEET_ENDPOINT: "", HR_PASSWORD: "2468" };
+  var VALUE_COLORS = { BOLD: "#da9770", CRAFTED: "#5e7d6a", PROGRESSIVE: "#5b6a86" };
+  var LS_KEY = "tantatat_assessment_progress";
+  var TIME_LIMIT_MS = 30 * 60 * 1000;   // 30 นาที
+
+  var answers = {};   // no -> 0..3
+  var meta = {};
+  var lastCode = "";
+  var candidates = [];
+  var timerInterval = null;
+  var submitted = false;
+
+  function $(id) { return document.getElementById(id); }
+
+  // ---------------- init ----------------
+  function initRoles() {
+    var sel = $("cRole");
+    if (!sel || !DATA.roles) return;
+    DATA.roles.forEach(function (r) {
+      var o = document.createElement("option");
+      o.value = r.name; o.textContent = r.name; sel.appendChild(o);
+    });
+    var other = document.createElement("option");
+    other.value = "__other__"; other.textContent = "อื่นๆ (ระบุเอง)"; sel.appendChild(other);
+    sel.addEventListener("change", function () {
+      var o = $("cRoleOther");
+      if (!o) return;
+      if (sel.value === "__other__") { o.classList.remove("hidden"); o.focus(); }
+      else { o.classList.add("hidden"); }
+    });
+  }
+
+  function setMode(m) {
+    $("mCand").classList.toggle("active", m === "cand");
+    $("mHR").classList.toggle("active", m === "hr");
+    $("candView").classList.toggle("hidden", m !== "cand");
+    $("hrView").classList.toggle("hidden", m !== "hr");
+  }
+
+  // ---------------- candidate test ----------------
+  function startTest() {
+    var name = $("cName").value.trim();
+    var role = $("cRole").value;
+    if (role === "__other__") {
+      role = ($("cRoleOther").value || "").trim();
+      if (!role) { alert("กรุณาระบุตำแหน่งที่สมัคร"); return; }
+    }
+    if (!name) { alert("กรุณากรอกชื่อ-นามสกุล"); $("cName").focus(); return; }
+    var nameParts = name.split(/\s+/).filter(function (w) { return w.length > 0; });
+    if (nameParts.length < 2 || nameParts.some(function (w) { return w.length < 2; })) {
+      alert("กรุณากรอกทั้งชื่อและนามสกุลให้ครบ (เช่น สมชาย ใจดี)"); $("cName").focus(); return;
+    }
+    if (!role) { alert("กรุณาเลือกหรือระบุตำแหน่งที่สมัคร"); return; }
+    meta = { name: name, role: role, date: new Date().toISOString(), startTime: Date.now() };
+    $("introCard").classList.add("hidden");
+    $("testCard").classList.remove("hidden");
+    renderQuestions();
+    saveProgress();
+    startTimer();
+    window.scrollTo(0, 0);
+  }
+
+  function renderQuestions() {
+    var box = $("questions");
+    box.innerHTML = "";
+    DATA.questions.forEach(function (q) {
+      var dimClass = { EQ: "b-eq", IQ: "b-iq", AQ: "b-aq" }[q.dim];
+      var opts = q.options.map(function (o, i) {
+        var sel = answers[q.no] === i ? " sel" : "";
+        var chk = answers[q.no] === i ? " checked" : "";
+        return '<label class="opt' + sel + '" data-q="' + q.no + '" data-i="' + i + '">' +
+          '<input type="radio" name="q' + q.no + '" value="' + i + '"' + chk + ">" +
+          '<span class="ol">' + "ABCD"[i] + "</span><span>" + o + "</span></label>";
+      }).join("");
+      var el = document.createElement("div");
+      el.className = "q";
+      el.innerHTML =
+        '<div class="qtop"><span class="qno">ข้อ ' + q.no + "</span></div>" +
+        '<div class="qtext">' + q.q + "</div>" +
+        '<div class="opts">' + opts + "</div>";
+      box.appendChild(el);
+    });
+    var optEls = box.querySelectorAll(".opt");
+    optEls.forEach(function (opt) {
+      opt.addEventListener("click", function () {
+        var no = +opt.getAttribute("data-q");
+        var i = +opt.getAttribute("data-i");
+        answers[no] = i;
+        box.querySelectorAll('.opt[data-q="' + no + '"]').forEach(function (o) { o.classList.remove("sel"); });
+        opt.classList.add("sel");
+        var inp = opt.querySelector("input"); if (inp) inp.checked = true;
+        updateProgress();
+        saveProgress();
+      });
+    });
+    updateProgress();
+  }
+
+  function updateProgress() {
+    var done = Object.keys(answers).length, total = DATA.questions.length;
+    $("pcount").textContent = done + " / " + total;
+    $("pleft").textContent = done === total ? "ตอบครบแล้ว" : ("เหลืออีก " + (total - done) + " ข้อ");
+    $("pbar").style.width = (done / total * 100) + "%";
+    $("submitBtn").disabled = done !== total;
+  }
+
+  // ---------------- auto-save ----------------
+  function saveProgress() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ meta: meta, answers: answers })); } catch (e) {}
+  }
+  function restoreProgress() {
+    try {
+      var s = JSON.parse(localStorage.getItem(LS_KEY) || "null");
+      if (s && s.meta && s.meta.name && s.answers && Object.keys(s.answers).length) {
+        meta = s.meta; answers = s.answers;
+        $("cName").value = meta.name || "";
+        $("introCard").classList.add("hidden");
+        $("testCard").classList.remove("hidden");
+        renderQuestions();
+        if (!meta.startTime) { meta.startTime = Date.now(); saveProgress(); }
+        startTimer();
+      }
+    } catch (e) {}
+  }
+  function clearProgress() { try { localStorage.removeItem(LS_KEY); } catch (e) {} }
+
+  // ---------------- timer ----------------
+  function remainingMs() {
+    if (!meta.startTime) return TIME_LIMIT_MS;
+    return Math.max(0, TIME_LIMIT_MS - (Date.now() - meta.startTime));
+  }
+  function fmt(ms) {
+    var s = Math.floor(ms / 1000);
+    var m = Math.floor(s / 60);
+    var ss = s % 60;
+    return (m < 10 ? "0" : "") + m + ":" + (ss < 10 ? "0" : "") + ss;
+  }
+  function renderTimer() {
+    var el = $("timer");
+    if (!el) return;
+    var ms = remainingMs();
+    el.innerHTML = "\u23F1 " + fmt(ms);
+    el.classList.remove("warn", "danger");
+    if (ms <= 60 * 1000) el.classList.add("danger");
+    else if (ms <= 5 * 60 * 1000) el.classList.add("warn");
+  }
+  function startTimer() {
+    renderTimer();
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(function () {
+      renderTimer();
+      if (remainingMs() <= 0) {
+        clearInterval(timerInterval); timerInterval = null;
+        autoSubmitTimeUp();
+      }
+    }, 1000);
+  }
+  function stopTimer() {
+    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+  }
+  function autoSubmitTimeUp() {
+    if (submitted) return;
+    alert("หมดเวลาทำแบบทดสอบ (30 นาที) ระบบจะส่งคำตอบที่ทำไว้โดยอัตโนมัติ");
+    submitTest(true);
+  }
+
+  // ---------------- scoring ----------------
+  function scoreAnswers(ansArr, roleName) {
+    var dims = { EQ: { raw: 0, max: 0 }, IQ: { raw: 0, max: 0 }, AQ: { raw: 0, max: 0 } };
+    var valFit = {}; var detail = [];
+    DATA.questions.forEach(function (q, idx) {
+      var sc = DATA.scoring[String(q.no)].scores;
+      var chosen = ansArr[idx];
+      var answered = (chosen != null && chosen >= 0 && chosen < sc.length);
+      var got = answered ? sc[chosen] : 0, mx = Math.max.apply(null, sc), best = sc.indexOf(mx);
+      dims[q.dim].raw += got; dims[q.dim].max += mx;
+      if (!valFit[q.value]) valFit[q.value] = { raw: 0, max: 0 };
+      valFit[q.value].raw += got; valFit[q.value].max += mx;
+      detail.push({ no: q.no, dim: q.dim, value: q.value, q: q.q, options: q.options,
+        chosen: chosen, got: got, mx: mx, best: best });
+    });
+    var norm = {};
+    Object.keys(dims).forEach(function (d) { norm[d] = Math.round(dims[d].raw / dims[d].max * 100); });
+    var role = findRole(roleName);
+    var overall = Math.round(norm.EQ * role.EQ + norm.IQ * role.IQ + norm.AQ * role.AQ);
+    var lowest = Math.min(norm.EQ, norm.IQ, norm.AQ);
+    return { dims: dims, norm: norm, valFit: valFit, detail: detail, role: role, overall: overall, lowest: lowest };
+  }
+  function findRole(name) {
+    var r = DATA.roles.filter(function (x) { return x.name === name; })[0];
+    return r || DATA.roles[0];
+  }
+  function bandFor(score) {
+    for (var i = 0; i < DATA.bands.length; i++) { if (score >= DATA.bands[i].min) return DATA.bands[i]; }
+    return DATA.bands[DATA.bands.length - 1];
+  }
+  function lvlClass(level) {
+    return { "Strong signal": "l-strong", "Suitable signal": "l-suit",
+      "Mixed signal": "l-mix", "Needs validation": "l-need" }[level] || "l-mix";
+  }
+
+  // ---------------- backup code encode/decode ----------------
+  function encodePayload(obj) {
+    var json = JSON.stringify(obj);
+    var b64 = btoa(unescape(encodeURIComponent(json)));
+    var out = "";
+    for (var i = 0; i < b64.length; i++) { out += String.fromCharCode(b64.charCodeAt(i) ^ ((i % 7) + 3)); }
+    return "TANTER1:" + btoa(unescape(encodeURIComponent(out)));
+  }
+  function decodePayload(code) {
+    if (code.indexOf("TANTER1:") !== 0) throw new Error("format");
+    var scr = decodeURIComponent(escape(atob(code.slice(8))));
+    var b64 = "";
+    for (var i = 0; i < scr.length; i++) { b64 += String.fromCharCode(scr.charCodeAt(i) ^ ((i % 7) + 3)); }
+    return JSON.parse(decodeURIComponent(escape(atob(b64))));
+  }
+
+  // ---------------- submit -> Google Sheet ----------------
+  function submitTest(force) {
+    if (submitted) return;
+    if (!force && Object.keys(answers).length !== DATA.questions.length) { alert("กรุณาตอบให้ครบทุกข้อ"); return; }
+    submitted = true;
+    stopTimer();
+    var ansArr = DATA.questions.map(function (q) { return (answers[q.no] == null ? -1 : answers[q.no]); });
+    var res = scoreAnswers(ansArr, meta.role);
+    var band = bandFor(res.overall);
+    lastCode = encodePayload({ v: 1, name: meta.name, role: meta.role, date: meta.date, ans: ansArr });
+
+    var record = {
+      timestamp: meta.date, name: meta.name, role: meta.role,
+      eq: res.norm.EQ, iq: res.norm.IQ, aq: res.norm.AQ,
+      overall: res.overall, lowest: res.lowest, level: band.level,
+      answers: ansArr.map(function (x) { return x < 0 ? "x" : x; }).join(""), code: lastCode
+    };
+
+    $("testCard").classList.add("hidden");
+    $("doneCard").classList.remove("hidden");
+    $("doneName").textContent = meta.name;
+    $("resultCode").textContent = lastCode;
+    window.scrollTo(0, 0);
+
+    var st = $("sendStatus");
+    if (!CONFIG.SHEET_ENDPOINT) {
+      st.innerHTML = '<div class="status info">ยังไม่ได้ตั้งค่าปลายทาง Google Sheet — แสดงรหัสสำรองให้ส่ง HR แทน</div>';
+      $("backupBox").classList.remove("hidden");
+      clearProgress();
+      return;
+    }
+    st.innerHTML = '<div class="status info">กำลังส่งผลให้ HR...</div>';
+    sendToSheet(record, function () {
+      st.innerHTML = '<div class="status ok">ส่งผลเข้าระบบ HR สำเร็จ</div>';
+      clearProgress();
+    }, function () {
+      st.innerHTML = '<div class="status err">ส่งอัตโนมัติไม่สำเร็จ กรุณาส่งรหัสสำรองด้านล่างให้ HR</div>';
+      $("backupBox").classList.remove("hidden");
+      clearProgress();
+    });
+  }
+
+  // Reliable POST via hidden form + iframe (avoids Apps Script no-cors 302 issue)
+  function sendToSheet(record, onOk, onErr) {
+    try {
+      var f = document.createElement("form");
+      f.method = "POST"; f.action = CONFIG.SHEET_ENDPOINT; f.target = "sinkFrame";
+      function add(k, v) { var i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = v; f.appendChild(i); }
+      add("action", "submit");
+      Object.keys(record).forEach(function (k) { add(k, record[k]); });
+      document.body.appendChild(f);
+      var done = false;
+      var frame = $("sinkFrame");
+      var timer = setTimeout(function () { if (!done) { done = true; cleanup(); onOk(); } }, 4000);
+      frame.onload = function () { if (!done) { done = true; clearTimeout(timer); cleanup(); onOk(); } };
+      function cleanup() { try { document.body.removeChild(f); } catch (e) {} }
+      f.submit();
+    } catch (e) { onErr(); }
+  }
+
+  function copyCode() {
+    try { navigator.clipboard.writeText(lastCode).then(function () { $("copyMsg").textContent = "คัดลอกแล้ว"; }); }
+    catch (e) { $("copyMsg").textContent = "คัดลอกไม่สำเร็จ ลองเลือกข้อความเอง"; }
+  }
+  function downloadCode() {
+    var blob = new Blob([lastCode], { type: "text/plain" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "result_" + (meta.name || "candidate").replace(/\s+/g, "_") + ".txt";
+    a.click();
+  }
+
+  // ---------------- HR ----------------
+  function hrLogin() {
+    if ($("hrPass").value === CONFIG.HR_PASSWORD) {
+      $("hrLockCard").classList.add("hidden");
+      $("hrPanel").classList.remove("hidden");
+      if (CONFIG.SHEET_ENDPOINT) loadCandidates();
+      else $("listStatus").innerHTML = '<span style="color:var(--warn)">ยังไม่ได้ตั้งค่า Google Sheet — ใช้ "วางรหัสด้วยมือ" ไปก่อนได้</span>';
+    } else {
+      $("hrErr").textContent = "รหัสผ่านไม่ถูกต้อง";
+    }
+  }
+  function toggleManual() { $("manualCard").classList.toggle("hidden"); }
+
+  function loadCandidates() {
+    if (!CONFIG.SHEET_ENDPOINT) { $("listStatus").textContent = "ยังไม่ได้ตั้งค่า Google Sheet"; return; }
+    $("listStatus").textContent = "กำลังโหลด...";
+    var cb = "cb_" + Date.now();
+    var s = document.createElement("script");
+    window[cb] = function (data) {
+      try {
+        candidates = (data && data.rows) || [];
+        renderCandidateList();
+        $("listStatus").textContent = "พบ " + candidates.length + " รายการ · อัปเดตล่าสุด " + new Date().toLocaleString("th-TH");
+      } catch (e) {
+        $("listStatus").innerHTML = '<span style="color:var(--bad)">อ่านข้อมูลไม่สำเร็จ</span>';
+      } finally {
+        try { delete window[cb]; } catch (e) {}
+        try { s.parentNode.removeChild(s); } catch (e) {}
+      }
+    };
+    s.src = CONFIG.SHEET_ENDPOINT + "?action=list&callback=" + cb;
+    s.onerror = function () {
+      $("listStatus").innerHTML = '<span style="color:var(--bad)">เชื่อมต่อ Sheet ไม่สำเร็จ ตรวจ URL/การ Deploy</span>';
+      try { delete window[cb]; } catch (e) {}
+    };
+    document.body.appendChild(s);
+  }
+
+  function populateRoleFilter() {
+    var sel = $("fRole");
+    if (!sel) return;
+    var seen = {}; var opts = '<option value="">ทุกตำแหน่ง</option>';
+    candidates.forEach(function (c) {
+      var r = c.role || "";
+      if (r && !seen[r]) { seen[r] = true; opts += '<option value="' + r.replace(/"/g, "&quot;") + '">' + r + "</option>"; }
+    });
+    var cur = sel.value;
+    sel.innerHTML = opts;
+    sel.value = cur;
+  }
+
+  function getFiltered() {
+    var q = ($("fSearch") && $("fSearch").value || "").trim().toLowerCase();
+    var role = $("fRole") && $("fRole").value || "";
+    var level = $("fLevel") && $("fLevel").value || "";
+    var minScore = parseInt(($("fScore") && $("fScore").value) || "0", 10);
+    var sort = $("fSort") && $("fSort").value || "date_desc";
+
+    // keep original index so viewCandidate still maps correctly
+    var list = candidates.map(function (c, i) { return { c: c, i: i }; });
+    list = list.filter(function (o) {
+      var c = o.c;
+      if (q && String(c.name || "").toLowerCase().indexOf(q) === -1) return false;
+      if (role && String(c.role || "") !== role) return false;
+      if (level && String(c.level || "") !== level) return false;
+      var ov = Number(c.overall);
+      if (minScore > 0 && !(isFinite(ov) && ov >= minScore)) return false;
+      return true;
+    });
+    function num(v) { var n = Number(v); return isFinite(n) ? n : -1; }
+    function tm(v) { var t = new Date(v).getTime(); return isNaN(t) ? 0 : t; }
+    list.sort(function (a, b) {
+      switch (sort) {
+        case "date_asc": return tm(a.c.timestamp) - tm(b.c.timestamp);
+        case "overall_desc": return num(b.c.overall) - num(a.c.overall);
+        case "overall_asc": return num(a.c.overall) - num(b.c.overall);
+        case "name_asc": return String(a.c.name || "").localeCompare(String(b.c.name || ""), "th");
+        default: return tm(b.c.timestamp) - tm(a.c.timestamp); // date_desc
+      }
+    });
+    return list;
+  }
+
+  function renderCandidateList() {
+    if (!candidates.length) {
+      $("candList").innerHTML = '<p class="note">ยังไม่มีผู้สมัครส่งผล</p>';
+      $("filterBar").classList.add("hidden");
+      $("filterCount").classList.add("hidden");
+      return;
+    }
+    $("filterBar").classList.remove("hidden");
+    $("filterCount").classList.remove("hidden");
+    populateRoleFilter();
+    var list = getFiltered();
+    $("filterCount").textContent = "แสดง " + list.length + " / " + candidates.length + " รายการ";
+    if (!list.length) {
+      $("candList").innerHTML = '<p class="note">ไม่พบผู้สมัครที่ตรงกับเงื่อนไข</p>';
+      return;
+    }
+    var rows = list.map(function (o) {
+      var c = o.c, band = c.level || "";
+      var ov = (c.overall !== null && c.overall !== undefined && c.overall !== "") ? c.overall : "-";
+      var lo = (c.lowest !== null && c.lowest !== undefined && c.lowest !== "") ? c.lowest : "-";
+      var ts = c.timestamp ? new Date(c.timestamp).toLocaleString("th-TH") : "-";
+      return '<tr class="rowlink" data-idx="' + o.i + '">' +
+        "<td>" + ts + "</td><td><b>" + (c.name || "-") + "</b></td><td>" + (c.role || "-") + "</td>" +
+        '<td style="text-align:center">' + ov + "</td>" +
+        '<td style="text-align:center">' + lo + "</td>" +
+        '<td><span class="lvl ' + lvlClass(band) + '">' + band + "</span></td>" +
+        '<td style="text-align:right">&rsaquo;</td></tr>';
+    }).join("");
+    $("candList").innerHTML =
+      '<table><tr><th>วันที่</th><th>ชื่อ</th><th>ตำแหน่ง</th><th style="text-align:center">Overall</th>' +
+      '<th style="text-align:center">ต่ำสุด</th><th>ระดับ</th><th></th></tr>' + rows + "</table>";
+    $("candList").querySelectorAll(".rowlink").forEach(function (tr) {
+      tr.addEventListener("click", function () { viewCandidate(+tr.getAttribute("data-idx")); });
+    });
+  }
+
+  function viewCandidate(i) {
+    var c = candidates[i];
+    var p;
+    try { p = decodePayload(c.code); }
+    catch (e) {
+      if (c.answers) {
+        p = { name: c.name, role: c.role, date: c.timestamp,
+          ans: String(c.answers).split("").map(function (ch) { return ch === "x" ? -1 : Number(ch); }) };
+      } else { alert("ข้อมูลผู้สมัครไม่สมบูรณ์"); return; }
+    }
+    renderDetail(p);
+  }
+
+  function loadCodeFile() { $("fileIn").click(); }
+  function onFile(e) {
+    var f = e.target.files[0]; if (!f) return;
+    var r = new FileReader();
+    r.onload = function () { $("hrCodeIn").value = String(r.result).trim(); };
+    r.readAsText(f);
+  }
+  function hrProcessCode() {
+    var code = $("hrCodeIn").value.trim();
+    $("hrProcErr").textContent = "";
+    var p;
+    try { p = decodePayload(code); }
+    catch (e) { $("hrProcErr").textContent = "รหัสไม่ถูกต้องหรือเสียหาย"; return; }
+    renderDetail(p);
+  }
+
+  function donut(score, color) {
+    var r = 64, c = 2 * Math.PI * r, off = c * (1 - score / 100);
+    return '<svg viewBox="0 0 150 150" width="150" height="150">' +
+      '<circle cx="75" cy="75" r="' + r + '" fill="none" stroke="#e3e6ee" stroke-width="12"/>' +
+      '<circle cx="75" cy="75" r="' + r + '" fill="none" stroke="' + color + '" stroke-width="12" ' +
+      'stroke-linecap="round" stroke-dasharray="' + c + '" stroke-dashoffset="' + off + '" transform="rotate(-90 75 75)"/>' +
+      '<text x="75" y="70" text-anchor="middle" font-size="34" font-weight="800" fill="#1c2130">' + score + "</text>" +
+      '<text x="75" y="94" text-anchor="middle" font-size="12" fill="#6b7488">/ 100</text></svg>';
+  }
+  function dimRow(label, score, color) {
+    return "<tr><td><strong>" + label + "</strong></td>" +
+      '<td style="width:40%"><div class="dimbar"><i style="width:' + score + "%;background:" + color + '"></i></div></td>' +
+      '<td style="text-align:right;font-weight:700">' + score + "</td></tr>";
+  }
+
+  var lastDetail = null, lastMeta = null;
+
+  function renderDetail(p) {
+    var res = scoreAnswers(p.ans, p.role);
+    var n = res.norm, role = res.role, overall = res.overall, lowest = res.lowest, band = bandFor(overall);
+
+    var valHtml = Object.keys(res.valFit).map(function (v) {
+      var f = res.valFit[v], pct = Math.round(f.raw / f.max * 100);
+      return '<div class="valrow"><span class="valname" style="color:' + VALUE_COLORS[v] + '">' + v + "</span>" +
+        '<div class="dimbar" style="flex:1"><i style="width:' + pct + "%;background:" + VALUE_COLORS[v] + '"></i></div>' +
+        '<span style="font-weight:700;min-width:42px;text-align:right">' + pct + "%</span></div>";
+    }).join("");
+
+    var valDef = DATA.values.map(function (x) {
+      return '<tr><td style="color:' + VALUE_COLORS[x.value] + ';font-weight:700">' + x.value + "</td><td>" + x.def + "</td></tr>";
+    }).join("");
+
+    var detailRows = res.detail.map(function (d) {
+      var unanswered = (d.chosen == null || d.chosen < 0);
+      var chosenLetter = unanswered ? "-" : "ABCD"[d.chosen], bestLetter = "ABCD"[d.best];
+      var chosenText = unanswered ? "(ไม่ได้ตอบ)" : d.options[d.chosen];
+      var cls, label;
+      if (unanswered) { cls = "ans-wrong"; label = "ไม่ตอบ"; }
+      else if (d.dim === "IQ") { cls = d.got > 0 ? "ans-correct" : "ans-wrong"; label = d.got > 0 ? "ถูก" : "ผิด"; }
+      else if (d.chosen === d.best) { cls = "ans-correct"; label = "ดีที่สุด"; }
+      else if (d.got >= d.mx * 0.5) { cls = "ans-partial"; label = "พอใช้"; }
+      else { cls = "ans-wrong"; label = "ต่ำ"; }
+      var dimC = { EQ: "b-eq", IQ: "b-iq", AQ: "b-aq" }[d.dim];
+      return "<tr><td>" + d.no + '</td><td><span class="badge ' + dimC + '">' + d.dim + "</span></td>" +
+        '<td style="max-width:300px">' + d.q +
+        '<div class="note">ตอบ: <b>' + chosenLetter + ".</b> " + chosenText + "</div>" +
+        '<div class="note" style="color:var(--good)">เฉลย: <b>' + bestLetter + ".</b> " + d.options[d.best] + "</div></td>" +
+        '<td style="text-align:center"><span class="' + cls + '">' + label + "</span>" +
+        '<div class="note">' + d.got + "/" + d.mx + "</div></td></tr>";
+    }).join("");
+
+    var dt = new Date(p.date);
+    var dtStr = isNaN(dt.getTime()) ? "-" : dt.toLocaleString("th-TH");
+    var warn = lowest < 50
+      ? '<p style="color:var(--warn)">มีมิติที่คะแนนต่ำกว่า 50 (ต่ำสุด = ' + lowest + ') — ห้ามใช้คะแนนรวมกลบจุดเสี่ยง ควรเจาะถามในมิติที่ต่ำระหว่างสัมภาษณ์</p>'
+      : "";
+
+    var html =
+      '<div class="card"><div class="spread"><div>' +
+        '<h2 style="margin-bottom:4px">' + (p.name || "(ไม่ระบุชื่อ)") + "</h2>" +
+        '<div class="note">ตำแหน่ง: <b>' + role.name + "</b> · วันที่ทำ: " + dtStr + "</div>" +
+        '<div class="note">น้ำหนัก: EQ ' + Math.round(role.EQ * 100) + "% · IQ " + Math.round(role.IQ * 100) + "% · AQ " + Math.round(role.AQ * 100) + "%</div>" +
+        '</div><span class="lvl ' + lvlClass(band.level) + '">' + band.level + "</span></div></div>" +
+      '<div class="card"><div class="spread" style="align-items:flex-start">' +
+        '<div style="text-align:center">' + donut(overall, "#5b6a86") + '<div class="note" style="margin-top:6px">Overall (ถ่วงน้ำหนักตามตำแหน่ง)</div></div>' +
+        '<div style="flex:1;min-width:260px"><table>' +
+          dimRow("EQ — อารมณ์/บริการ", n.EQ, "#5b6a86") +
+          dimRow("IQ — คิด/คำนวณ", n.IQ, "#7d7f75") +
+          dimRow("AQ — รับผิดชอบ/อดทน", n.AQ, "#da9770") +
+        "</table>" +
+        '<div class="kpis" style="margin-top:14px">' +
+          '<div class="kpi"><div class="n" style="color:#5b6a86">' + overall + '</div><div class="l">Overall</div></div>' +
+          '<div class="kpi"><div class="n" style="color:' + (lowest < 50 ? "#b4595b" : "#4c4543") + '">' + lowest + '</div><div class="l">คะแนนต่ำสุด</div></div>' +
+          '<div class="kpi"><div class="n">' + p.ans.length + '/30</div><div class="l">ตอบครบ</div></div>' +
+          '<div class="kpi"><div class="n" style="font-size:15px;margin-top:9px">' + band.level + '</div><div class="l">ระดับสัญญาณ</div></div>' +
+        "</div></div></div></div>" +
+      '<div class="card"><h2>คำแนะนำ (Decision Support)</h2><p>' + band.interp + "</p>" + warn +
+        '<p class="note">เป็นคำแนะนำเชิงสัญญาณ ไม่ใช่คำสั่งรับหรือไม่รับ ใช้ร่วมกับ Structured Interview, Work Trial, เอกสาร และ Reference Check เสมอ</p></div>' +
+      '<div class="card"><h2>Company Values Fit</h2>' + valHtml +
+        '<p class="note" style="margin-top:6px">คะแนน Values เป็นมุมมองประกอบ ไม่ถูกบวกซ้ำใน Overall Score</p>' +
+        '<table style="margin-top:10px"><tr><th>Value</th><th>นิยามพฤติกรรม</th></tr>' + valDef + "</table></div>" +
+      '<div class="card"><h2>รายละเอียดรายข้อ (เฉลย + คะแนน)</h2>' +
+        '<div class="flex" style="margin-bottom:10px">' +
+          '<button class="btn ghost sm" id="csvBtn" type="button">Export CSV</button>' +
+          '<button class="btn ghost sm" id="printBtn" type="button">พิมพ์ / บันทึก PDF</button></div>' +
+        '<div style="overflow-x:auto"><table><tr><th>ข้อ</th><th>มิติ</th><th>คำถาม / คำตอบ / เฉลย</th>' +
+        '<th style="text-align:center">ผล</th></tr>' + detailRows + "</table></div></div>";
+
+    var box = $("hrResult");
+    box.classList.remove("hidden");
+    box.innerHTML = html;
+    lastDetail = res.detail;
+    lastMeta = { name: p.name, role: role.name, overall: overall, n: n };
+    var csvBtn = $("csvBtn"), printBtn = $("printBtn");
+    if (csvBtn) csvBtn.addEventListener("click", exportCSV);
+    if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
+    box.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function exportCSV() {
+    var d = lastDetail, m = lastMeta;
+    if (!d || !m) return;
+    var rows = [["Candidate", m.name], ["Role", m.role], ["Overall", m.overall],
+      ["EQ", m.n.EQ], ["IQ", m.n.IQ], ["AQ", m.n.AQ], [],
+      ["No", "Dim", "Value", "Question", "Chosen", "ChosenText", "Best", "BestText", "Got", "Max"]];
+    d.forEach(function (x) {
+      rows.push([x.no, x.dim, x.value, x.q, "ABCD"[x.chosen], x.options[x.chosen],
+        "ABCD"[x.best], x.options[x.best], x.got, x.mx]);
+    });
+    var csv = "\ufeff" + rows.map(function (r) {
+      return r.map(function (c) { return '"' + String(c == null ? "" : c).replace(/"/g, '""') + '"'; }).join(",");
+    }).join("\n");
+    var blob = new Blob([csv], { type: "text/csv" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "assessment_" + (m.name || "candidate").replace(/\s+/g, "_") + ".csv";
+    a.click();
+  }
+
+  // ---------------- wire up events ----------------
+  function boot() {
+    try { initRoles(); } catch (e) {}
+    try { restoreProgress(); } catch (e) {}
+    $("mCand").addEventListener("click", function () { setMode("cand"); });
+    $("mHR").addEventListener("click", function () { setMode("hr"); });
+    $("startBtn").addEventListener("click", startTest);
+    $("submitBtn").addEventListener("click", submitTest);
+    $("copyBtn").addEventListener("click", copyCode);
+    $("dlBtn").addEventListener("click", downloadCode);
+    $("hrLoginBtn").addEventListener("click", hrLogin);
+    $("hrPass").addEventListener("keydown", function (e) { if (e.key === "Enter") hrLogin(); });
+    $("reloadBtn").addEventListener("click", loadCandidates);
+    $("manualBtn").addEventListener("click", toggleManual);
+    var fSearch = $("fSearch"); if (fSearch) fSearch.addEventListener("input", function () { if (candidates.length) renderCandidateList(); });
+    ["fRole", "fLevel", "fScore", "fSort"].forEach(function (id) {
+      var el = $(id);
+      if (el) el.addEventListener("change", function () { if (candidates.length) renderCandidateList(); });
+    });
+    $("procBtn").addEventListener("click", hrProcessCode);
+    $("fileBtn").addEventListener("click", loadCodeFile);
+    $("fileIn").addEventListener("change", onFile);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+
+</script>
+
+
+</body></html>
