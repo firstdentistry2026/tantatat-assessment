@@ -547,23 +547,7 @@
   .pdfbtn{background:#0f766e;color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;font-family:inherit;}
   .photo-box img{width:100%;height:100%;object-fit:cover;border-radius:6px}
 </style>
-<style id="hrm-theme">
-:root{--bg:#07090f!important;--card:#0e121c!important;--card2:#141a28!important;--line:#1f2738!important;--txt:#e6e9f2!important;--ink:#e6e9f2!important;--muted:#7b859c!important;--accent:#22d3ee!important;--accent2:#a78bfa!important;--brand:#22d3ee!important;--brand-dark:#0891b2!important}
-html,body{background:#07090f!important;color:#e6e9f2!important;font-family:'Segoe UI',Tahoma,sans-serif!important}
-body *{border-color:#1f2738!important}
-div,section,header,main,article,aside,form,.card,.panel,.modal,.box,table,thead,tbody,tr,td,th,li{background-color:transparent;color:inherit}
-.card,.panel,.box,[class*=card],[class*=modal]>div,[class*=Modal]>div,.section,.wrap>div{background:#0e121c!important;color:#e6e9f2!important}
-th{background:#141a28!important;color:#22d3ee!important}
-td{color:#e6e9f2!important}tr:hover td{background:#141a28!important}
-input,select,textarea{background:#141a28!important;color:#e6e9f2!important;border:1px solid #1f2738!important}
-input:focus,select:focus,textarea:focus{outline:none!important;border-color:#22d3ee!important;box-shadow:0 0 10px rgba(34,211,238,.35)!important}
-button,.btn,.dlbtn{background:linear-gradient(90deg,#22d3ee,#a78bfa)!important;color:#07090f!important;border:0!important;font-weight:700!important}
-a{color:#22d3ee!important}
-h1,h2,h3{color:#e6e9f2!important}
-[style*="background:#fff"],[style*="background: #fff"],[style*="background:#ffffff"],[style*="background:white"],[style*="background:#f"]{background:#0e121c!important}
-[style*="color:#64748b"],[style*="color:#7d7f75"]{color:#7b859c!important}
-.hrm-hide{display:none!important}
-</style><style>#formView,#loginView,button[onclick="doLogout()"]{display:none!important}</style><style>tr:nth-child(even) td{background:rgba(255,255,255,.02)!important}tbody tr,tr{background:transparent!important}table{background:#0e121c!important;border-radius:12px;overflow:hidden}th{background:#141a28!important;color:#22d3ee!important}</style><style>.app-signature-pad{border:1px solid var(--line,#cbd5e1);border-radius:12px;padding:14px;margin-top:16px;break-inside:avoid}.app-signature-pad>label{display:block;font-weight:600;margin:0 0 8px}.app-signature-pad canvas{display:block;width:100%;height:auto;aspect-ratio:10/3;background:#fff;border:1px solid #8795a6;border-radius:8px;touch-action:none;cursor:crosshair}.app-signature-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}.app-signature-tools button{min-height:44px;padding:8px 14px;border:1px solid var(--brand,#0f766e);border-radius:8px;background:var(--card,#fff);color:var(--brand-dark,#115e59);font:inherit}.app-signature-pad small{color:var(--muted,#475569)}.app-signature-message{margin:12px 0;color:#0f766e}.app-signature-message.error{color:#b91c1c}.app-signature-date{padding:12px 0;font-size:13px}@media print{.app-signature-tools{display:none!important}}
+<style>.app-signature-pad{border:1px solid var(--line,#cbd5e1);border-radius:12px;padding:14px;margin-top:16px;break-inside:avoid}.app-signature-pad>label{display:block;font-weight:600;margin:0 0 8px}.app-signature-pad canvas{display:block;width:100%;height:auto;aspect-ratio:10/3;background:#fff;border:1px solid #8795a6;border-radius:8px;touch-action:none;cursor:crosshair}.app-signature-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}.app-signature-tools button{min-height:44px;padding:8px 14px;border:1px solid var(--brand,#0f766e);border-radius:8px;background:var(--card,#fff);color:var(--brand-dark,#115e59);font:inherit}.app-signature-pad small{color:var(--muted,#475569)}.app-signature-message{margin:12px 0;color:#0f766e}.app-signature-message.error{color:#b91c1c}.app-signature-date{padding:12px 0;font-size:13px}@media print{.app-signature-tools{display:none!important}}
 </style></head>
 <body>
 
@@ -623,7 +607,7 @@ h1,h2,h3{color:#e6e9f2!important}
             <div class="field"><label>Name (English) <span class="req">*</span></label><input type="text" name="firstname_en" required=""></div>
             <div class="field"><label>Surname (English) <span class="req">*</span></label><input type="text" name="lastname_en" required=""></div>
           </div>
-          <div class="grid-2"><div class="field"><label for="appNickname">ชื่อเล่น / Nickname <span class="req">*</span></label><input type="text" id="appNickname" name="nickname" autocomplete="nickname" placeholder="ชื่อเล่น" required=""></div><div class="field"><label>Email <span class="req">*</span></label><input type="email" id="appEmail" aria-label="อีเมล / Email" name="email" autocomplete="email" inputmode="email" placeholder="name@example.com" required=""></div></div>
+          <div class="field"><label>ชื่อเล่น / Preferred Name <span class="req">*</span></label><input type="text" name="nickname" required=""></div>
           <div class="field">
             <label>เพศ / Gender <span class="req">*</span></label>
             <div class="choices">
@@ -636,7 +620,7 @@ h1,h2,h3{color:#e6e9f2!important}
             <div class="field"><label>สัญชาติ / Nationality <span class="req">*</span></label><input type="text" name="nationality" required=""></div>
             <div class="field"><label>เลขบัตรประชาชน / National ID <span class="req">*</span></label><input type="text" name="national_id" required="" inputmode="numeric" maxlength="13" pattern="[0-9]{13}" title="กรุณาใส่ตัวเลข 13 หลัก" placeholder="ตัวเลข 13 หลัก" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,13)"></div>
             <div class="field"><label>วัน/เดือน/ปีเกิด / Date of birth <span class="req">*</span></label><input type="date" name="dob" required="" max="2015-12-31" onclick="try{this.showPicker()}catch(e){}" onfocus="try{this.showPicker()}catch(e){}" style="cursor:pointer"></div>
-            
+            <div class="field"><label>Email <span class="req">*</span></label><input type="email" name="email" required=""></div>
             <div class="field"><label>หมายเลขโทรศัพท์ / Phone <span class="req">*</span></label><input type="tel" name="phone" inputmode="numeric" maxlength="10" pattern="[0-9]{9,10}" title="ตัวเลข 9-10 หลัก" placeholder="0812345678" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)" required=""></div>
           </div>
           <div class="field"><label>ที่อยู่ตามทะเบียนบ้าน / Registered address <span class="req">*</span></label><textarea name="addr_reg" required=""></textarea></div>
@@ -1147,20 +1131,19 @@ h1,h2,h3{color:#e6e9f2!important}
     var yes=g(o,'consent')==='ยินยอม';
     var cr=function(t){return '<div class="cr"><span>'+t+'</span><span>'+bx(yes)+' ยินยอม</span><span>'+bx(!yes&&g(o,'consent'))+' ไม่ยินยอม</span></div>';};
     var foot='<div class="foot">บริษัท ทันตะทัตถ์ คลินิก จำกัด<br>เลขที่ 183 อาคารรีเจ้นท์ เฮ้าส์ ชั้นที่ 11 ถนนราชดำริห์ แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330</div>';
-    var css='@page{size:A4 portrait;margin:12mm}body{font-family:"Sarabun","Tahoma",sans-serif;font-size:12px;color:#000;margin:0}.page{break-after:page;page-break-after:always;position:relative;width:186mm;height:270mm;box-sizing:border-box;margin:0 auto}.page:last-child{break-after:auto;page-break-after:auto}.print-content{width:186mm;transform-origin:top left;box-sizing:border-box}*{box-sizing:border-box}body{width:186mm;line-height:1.3}table{table-layout:fixed}td,th{overflow-wrap:anywhere;word-break:normal}tr{break-inside:avoid;page-break-inside:avoid}.certification,.sig{break-inside:avoid;page-break-inside:avoid}@media screen{body{margin:16px auto;background:#eee}.page{background:#fff;box-shadow:0 1px 6px #aaa;margin-bottom:20px}}'
+    var css='@page{size:A4;margin:12mm}body{font-family:"Sarabun","Tahoma",sans-serif;font-size:12px;color:#000;margin:0}.page{page-break-after:always;position:relative}.page:last-child{page-break-after:auto}'
      +'.hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.hd img{height:62px}.hd h1{font-size:19px;font-weight:500;margin:0}.photo{width:90px;height:110px;border:1px solid #999;display:flex;align-items:center;justify-content:center;color:#999;font-size:11px}'
-     +'.warn{font-size:10.5px;margin:4px 0 6px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #000;padding:3px 5px;vertical-align:top;text-align:left;font-weight:normal}th{font-weight:bold}.sh{font-weight:bold}.sh.blue{color:#1d4ed8}.v{color:#0b3d91;font-weight:600}tr.e td{height:17px}'
-     +'.foot{text-align:right;font-size:10px;margin-top:8px}.cr{display:grid;grid-template-columns:1fr 110px 110px;padding:7px 0 7px 20px}.consent h2{text-align:center;font-size:17px;margin:4px 0}.consent p{line-height:1.8}.sig{text-align:right;margin-top:18px;line-height:1.9}.certification{font-size:11px;line-height:1.45}.consent .sig{margin-top:20px}';
+     +'.warn{font-size:10.5px;margin:4px 0 6px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #000;padding:5px 6px;vertical-align:top;text-align:left;font-weight:normal}th{font-weight:bold}.sh{font-weight:bold}.sh.blue{color:#1d4ed8}.v{color:#0b3d91;font-weight:600}tr.e td{height:20px}'
+     +'.foot{text-align:right;font-size:10px;margin-top:8px}.cr{display:grid;grid-template-columns:1fr 110px 110px;padding:7px 0 7px 20px}.consent h2{text-align:center;font-size:17px;margin:4px 0}.consent p{line-height:1.8}.sig{text-align:right;margin-top:30px;line-height:2.2}';
     var h='<!DOCTYPE html><html lang="th"><head><meta charset="UTF-8"><title>ใบสมัคร - '+esc(fullTH(o))+'</title><style>'+css+'</style></head><body>';
     // ---- page 1
-    h+='<div class="page"><div class="print-content"><div class="hd"><img src="'+LOGO_SRC+'"><h1>ใบสมัครงาน / APPLICATION FORM</h1><div class="photo">'+(g(o,'photo').indexOf('data:image')===0?'<img src="'+g(o,'photo')+'" style="width:100%;height:100%;object-fit:cover">':'Photo 1"')+'</div></div>';
+    h+='<div class="page"><div class="hd"><img src="'+LOGO_SRC+'"><h1>ใบสมัครงาน / APPLICATION FORM</h1><div class="photo">'+(g(o,'photo').indexOf('data:image')===0?'<img src="'+g(o,'photo')+'" style="width:100%;height:100%;object-fit:cover">':'Photo 1"')+'</div></div>';
     h+='<div class="warn">คำเตือน: โปรดอ่านและพิจารณาให้เข้าใจก่อนเขียนข้อความลงในใบสมัคร หากภายหลังการจ้างปรากฏว่าข้อความที่ท่านแจ้งไว้ไม่เป็นความจริง ถือว่าสภาพพนักงานสิ้นสุดลงทันที<br>(Please read instruction carefully. False statements may result in immediate termination.)</div>';
     h+='<table>';
     h+='<tr><td colspan="6" class="sh">ตำแหน่งงาน / Job Position</td></tr>';
     h+='<tr><td colspan="4">สมัครตำแหน่ง: <span class="v">'+V('position')+'</span></td><td colspan="2">เงินเดือนที่ต้องการ: <span class="v">'+V('expected_salary')+'</span> บาท</td></tr>';
     h+='<tr><td colspan="6" class="sh">ประวัติส่วนตัว / Personal Information</td></tr>';
     h+='<tr><td colspan="3">ชื่อ-สกุล (ไทย): <span class="v">'+esc(fullTH(o))+'</span></td><td colspan="3">Name-Surname (English): <span class="v">'+esc(fullEN(o))+'</span></td></tr>';
-    h+='<tr><td colspan="2">ชื่อเล่น / Nickname: <span class="v">'+V('nickname')+'</span></td><td colspan="4">อีเมล / Email: <span class="v">'+V('email')+'</span></td></tr>';
     h+='<tr><td colspan="2">วัน/เดือน/ปีเกิด: <span class="v">'+thDate(g(o,'dob'))+'</span></td><td>อายุ: <span class="v">'+calcAge(g(o,'dob'))+'</span></td><td colspan="2">สัญชาติ: <span class="v">'+V('nationality')+'</span></td><td>เพศ: '+bx(g(o,'gender')==='ชาย')+' ชาย '+bx(g(o,'gender')==='หญิง')+' หญิง</td></tr>';
     h+='<tr><td colspan="5">ที่อยู่ตามทะเบียนบ้าน: <span class="v">'+regAddr+'</span></td><td>โทรศัพท์: <span class="v">'+V('phone')+'</span></td></tr>';
     h+='<tr><td colspan="5">ที่อยู่ปัจจุบัน: <span class="v">'+curAddr+'</span></td><td>โทรศัพท์: <span class="v">'+V('phone')+'</span></td></tr>';
@@ -1181,9 +1164,9 @@ h1,h2,h3{color:#e6e9f2!important}
     h+='<tr><td colspan="6">'+bx(mi==='ได้รับการยกเว้น')+' ได้รับการยกเว้น &nbsp;&nbsp;&nbsp; '+bx(mi==='รด')+' สำเร็จวิชารักษาดินแดน (รด.) &nbsp;&nbsp;&nbsp; '+bx(mi==='ปลดประจำการ')+' ปลดประจำการทหาร</td></tr>';
     h+='<tr><td colspan="6" class="sh">ประวัติการทำงาน / Employee History</td></tr>';
     h+='<tr><th>จาก (From)</th><th>ถึง (To)</th><th>ชื่อสถานที่ทำงาน</th><th>ตำแหน่งสุดท้าย</th><th>เงินเดือน</th><th>สาเหตุที่ออก</th></tr>'+jobs;
-    h+='</table>'+foot+'</div></div>';
+    h+='</table>'+foot+'</div>';
     // ---- page 2
-    h+='<div class="page"><div class="print-content"><table>';
+    h+='<div class="page"><table>';
     h+='<tr><td colspan="5" class="sh">การศึกษา / Education</td></tr><tr><th>ระดับการศึกษา</th><th>สถานศึกษา</th><th>คณะ/สาขา</th><th>ปีที่สำเร็จ</th><th>เกรด</th></tr>'+edu;
     h+='<tr><td colspan="5" class="sh">การฝึกอบรม / Training</td></tr><tr><td colspan="5" style="height:44px"><span class="v">'+V('training')+'</span></td></tr>';
     h+='<tr><td colspan="5" class="sh">บุคคลอ้างอิง / Reference Person</td></tr><tr><th>ชื่อ/นามสกุล (Name)</th><th>ความสัมพันธ์</th><th colspan="2">อาชีพ/ตำแหน่ง</th><th>โทรศัพท์</th></tr>';
@@ -1204,11 +1187,11 @@ h1,h2,h3{color:#e6e9f2!important}
     h+='4. ขณะนี้ท่านกำลังศึกษาอยู่หรือไม่? '+bx(g(o,'g_study')==='ไม่ได้ศึกษา')+' ไม่ได้ศึกษา '+bx(g(o,'g_study')==='กำลังศึกษา')+' กำลังศึกษา<br>';
     h+='5. สามารถไปปฏิบัติงานต่างจังหวัดได้หรือไม่? '+bx(g(o,'g_travel')==='ได้')+' ได้ '+bx(g(o,'g_travel')==='ไม่ได้')+' ไม่ได้<br>';
     h+='6. ท่านเคยถูกศาลสั่งให้ล้มละลายหรือไม่? '+bx(g(o,'g_bankrupt')==='ไม่เคย')+' ไม่เคย '+bx(g(o,'g_bankrupt')==='เคย')+' เคย<br>';
-    h+='</td></tr><tr class="certification"><td colspan="5"><span style="font-size:11px"><b>ข้าพเจ้าขอยืนยันว่า ข้อความทั้งหมดที่ข้าพเจ้าได้เขียนในใบสมัครงานนี้เป็นความจริงทุกประการ หากปรากฏในภายหลังว่ามีข้อความใดเป็นเท็จข้าพเจ้ายินยอมให้บริษัทบอกเลิกจ้างได้ทันที โดยไม่ต้องจ่ายเงินชดเชยใดๆ ทั้งสิ้น</b><br>(I certify the information contained in this form is true. If found false, I accept immediate discharge without compensation.) '+(g(o,'certify')?'<b>✓ ผู้สมัครรับรองแล้วทางออนไลน์ ('+V('timestamp')+')</b>':'')+'</span>';
+    h+='<span style="font-size:11px"><b>ข้าพเจ้าขอยืนยันว่า ข้อความทั้งหมดที่ข้าพเจ้าได้เขียนในใบสมัครงานนี้เป็นความจริงทุกประการ หากปรากฏในภายหลังว่ามีข้อความใดเป็นเท็จข้าพเจ้ายินยอมให้บริษัทบอกเลิกจ้างได้ทันที โดยไม่ต้องจ่ายเงินชดเชยใดๆ ทั้งสิ้น</b><br>(I certify the information contained in this form is true. If found false, I accept immediate discharge without compensation.) '+(g(o,'certify')?'<b>✓ ผู้สมัครรับรองแล้วทางออนไลน์ ('+V('timestamp')+')</b>':'')+'</span>';
     h+='<div class="sig">'+applicationSignatureImage(o,'application_signature')+'ลงชื่อ (Sign) ........................................................... ผู้สมัคร<br>วันที่ (Date) '+(g(o,'application_signature_at')?thDate(g(o,'application_signature_at')):'........ / ........ / ........')+'</div></td></tr>';
-    h+='</table>'+foot+'</div></div>';
+    h+='</table>'+foot+'</div>';
     // ---- page 3 consent
-    h+='<div class="page consent"><div class="print-content"><div style="text-align:center"><img src="'+LOGO_SRC+'" style="height:70px"></div><h2>หนังสือให้ความยินยอม</h2><h2>สำหรับการเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคล</h2>';
+    h+='<div class="page consent"><div style="text-align:center"><img src="'+LOGO_SRC+'" style="height:70px"></div><h2>หนังสือให้ความยินยอม</h2><h2>สำหรับการเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคล</h2>';
     h+='<p>โดยการลงลายมือชื่อในเอกสารฉบับนี้ ข้าพเจ้าในฐานะเจ้าของข้อมูลส่วนบุคคล ตกลงยินยอมให้ บริษัท ทันตะทัตถ์ คลินิก จำกัด (เรียกรวมว่า "บริษัทฯ") ดำเนินการดังต่อไปนี้ (ทำเครื่องหมาย ✓ ในช่อง)</p>';
     h+='<p><b>1. เก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลที่มีความอ่อนไหว เพื่อวัตถุประสงค์ต่างๆ ที่เกี่ยวข้องกับการจ้างงาน การบรรจุบุคลากรเข้าทำงาน และการบริหารจัดการด้านทรัพยากรบุคคลของบริษัทฯ ตลอดจนเพื่อดำเนินการอื่นๆ ที่จำเป็นหรือเกี่ยวเนื่องกับวัตถุประสงค์ดังกล่าว</b></p>';
     h+=cr('1.1 ข้อมูลศาสนา และ/หรือหมู่โลหิต ที่ปรากฏอยู่บนบัตรประจำตัวประชาชน')+cr('1.2 ข้อมูลสุขภาพ')+cr('1.3 ประวัติอาชญากรรมที่ปรากฏอยู่ในผลตรวจประวัติบุคคล')+cr('1.4 ข้อมูลชีวภาพ เช่น ลายนิ้วมือ ฝ่ามือ และภาพสแกนใบหน้า')+cr('1.5 ข้อมูลสหภาพแรงงาน')+cr('1.6 ข้อมูลความพิการ ที่ปรากฏอยู่บนบัตรประจำตัวคนพิการ');
@@ -1216,8 +1199,8 @@ h1,h2,h3{color:#e6e9f2!important}
     h+=cr('2.2 ข้อมูลสุขภาพ และความพิการ ที่ปรากฏอยู่ในใบรับรองแพทย์ ผลการตรวจสุขภาพ และ/หรือเอกสารอื่นๆ');
     h+='<p style="font-size:10.5px;color:#555">* ผลการยินยอมข้างต้นอ้างอิงจากคำตอบ PDPA ที่ผู้สมัครตอบในใบสมัครออนไลน์: <b>'+V('consent')+'</b></p>';
     h+='<p>ทั้งนี้ ข้าพเจ้าได้อ่าน และรับทราบสิทธิในฐานะเจ้าของข้อมูลส่วนบุคคลตามที่ระบุไว้ในประกาศเกี่ยวกับการคุ้มครองข้อมูลส่วนบุคคลของบริษัทฯ เรียบร้อยแล้ว</p>';
-    h+='<div class="sig">ลายมือชื่อ<br>'+applicationSignatureImage(o,'pdpa_signature')+'( <span class="v">'+esc(fullTH(o))+'</span> )<br>เจ้าของข้อมูลส่วนบุคคล<br>วันที่ '+(g(o,'pdpa_signature_at')?thDate(g(o,'pdpa_signature_at')):'..........................................')+'</div>'+foot+'</div></div>';
-    h+='<script>function fitApplicationPages(){document.querySelectorAll(\'.page\').forEach(function(page){var c=page.querySelector(\'.print-content\');c.style.zoom=\'1\';var scale=Math.min(1,(page.clientHeight-2)/c.scrollHeight,(page.clientWidth-1)/c.scrollWidth);c.style.zoom=String(scale);for(var i=0;i<3;i++){var r=c.getBoundingClientRect();var fit=Math.min(1,(page.clientHeight-4)/r.height,(page.clientWidth-2)/r.width);if(fit>=1)break;scale*=fit;c.style.zoom=String(scale);}page.dataset.printScale=scale.toFixed(3);});}window.addEventListener(\'beforeprint\',fitApplicationPages);window.onload=function(){var images=Array.from(document.images).map(function(img){return img.complete?Promise.resolve():new Promise(function(resolve){img.onload=resolve;img.onerror=resolve;});});Promise.all([document.fonts?document.fonts.ready:Promise.resolve()].concat(images)).then(function(){fitApplicationPages();requestAnimationFrame(function(){window.print();});});};<\/script></body></html>';
+    h+='<div class="sig">ลายมือชื่อ<br>'+applicationSignatureImage(o,'pdpa_signature')+'( <span class="v">'+esc(fullTH(o))+'</span> )<br>เจ้าของข้อมูลส่วนบุคคล<br>วันที่ '+(g(o,'pdpa_signature_at')?thDate(g(o,'pdpa_signature_at')):'..........................................')+'</div>'+foot+'</div>';
+    h+='<script>window.onload=function(){setTimeout(function(){window.print();},400);};<\/script></body></html>';
     return h;
   }
   var CUR=null;
@@ -1245,32 +1228,7 @@ h1,h2,h3{color:#e6e9f2!important}
 </script>
 
 
-<script>(function(){function Q(x){return document.querySelector(x)}function go(){try{var h=Q('#hrView');if(h&&!h.classList.contains('hr-hidden'))return true;if(window.showHR){showHR();return true}var i=Q('#pwInput');if(i&&window.doLogin){i.value='2468';doLogin()}return false;}catch(e){console.warn('hrm',e)}return false}var n=0;var t=setInterval(function(){if(go()||++n>40)clearInterval(t)},150);})();</script><script>(function(){
-function rgb(s){var m=s&&s.match(/rgba?\(([\d.]+),\s*([\d.]+),\s*([\d.]+)(?:,\s*([\d.]+))?/);return m?{r:+m[1],g:+m[2],b:+m[3],a:m[4]==null?1:+m[4]}:null}
-function lum(c){return (0.299*c.r+0.587*c.g+0.114*c.b)/255}
-function sat(c){var mx=Math.max(c.r,c.g,c.b),mn=Math.min(c.r,c.g,c.b);return mx?(mx-mn)/mx:0}
-function fix(el){if(el.nodeType!==1||el.__hrm)return;var t=el.tagName;if(t=='SCRIPT'||t=='STYLE'||t=='SVG'||t=='CANVAS'||t=='IMG'||t=='PATH')return;
- var cs=getComputedStyle(el),isBtn=(t=='BUTTON'||/btn/.test(el.className||''));
- var bi=cs.backgroundImage;
- if(bi&&bi.indexOf('gradient')>=0&&!isBtn){el.style.setProperty('background','linear-gradient(120deg,rgba(34,211,238,.16),rgba(167,139,250,.16)),#0e121c','important');}
- var bg=rgb(cs.backgroundColor);
- if(bg&&bg.a>0.3){var L=lum(bg),S=sat(bg);
-  if(isBtn){}
-  else if(L>0.55&&S<0.35)el.style.setProperty('background-color',(t=='BODY'||t=='HTML')?'#07090f':(t=='TR'||t=='TD')?'transparent':'#0e121c','important');
-  else if(L>0.35&&S<0.25)el.style.setProperty('background-color','#141a28','important');
-  else if(S>=0.35&&L>0.25&&!isBtn){el.style.setProperty('color','#07090f','important');el.__hrm=1;return}
- }
- if(!isBtn){var c=rgb(cs.color);if(c){var L2=lum(c),S2=sat(c);
-  if(L2<0.62&&S2<0.4)el.style.setProperty('color',L2<0.35?'#e6e9f2':'#9aa4bb','important');
-  else if(S2>=0.4&&L2<0.45)el.style.setProperty('color','#67e8f9','important');}}
- if(t=='TD'||t=='TR'||t=='TH')el.style.setProperty('border-color','#1f2738','important');
- el.__hrm=1}
-function run(root){fix(root);var all=(root.querySelectorAll?root.querySelectorAll('*'):[]);for(var i=0;i<all.length;i++)fix(all[i])}
-document.documentElement.style.setProperty('background','#07090f','important');
-run(document.body);
-new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType===1)run(n)});if(m.type=='attributes'&&m.target.__hrm&&m.attributeName!='style'){m.target.__hrm=0;fix(m.target)}})}).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
-setInterval(function(){run(document.body)},1500);
-})();</script><script>(function(){'use strict';
+<script>(function(){'use strict';
  var form=document.getElementById('applicationForm'),pads={},MAX=45000;
  function note(text,bad){var m=document.getElementById('applicationSignatureMessage');m.textContent=text;m.setAttribute('role',bad?'alert':'status');m.className=bad?'app-signature-message error':'app-signature-message';}
  function clear(id,explain){var p=pads[id];p.points=[];p.strokes=[];p.drawing=false;p.canvas.getContext('2d').clearRect(0,0,600,180);document.getElementById(id+'Value').value='';document.getElementById(id+'At').value='';document.getElementById(id+'Strokes').value='';document.getElementById(id+'Status').textContent=explain||'ยังไม่ได้ลงลายเซ็น';}
@@ -1288,9 +1246,9 @@ setInterval(function(){run(document.body)},1500);
 })();
 </script><script>var applicationHRToken='',applicationPending=null,applicationSending=false,applicationConfigReady=false;
 function applicationRandom(){return crypto.randomUUID().replace(/-/g,'')}
-function applicationConfig(){return new Promise(function(resolve,reject){var cb='appSigCb'+Date.now()+Math.random().toString(36).slice(2),s=document.createElement('script'),timer;function end(){clearTimeout(timer);s.remove();delete window[cb]}window[cb]=function(r){end();if(r&&r.release==='R12.2-APPLICATION-SSO'&&r.policyVersion==='application-signatures-2026-11-17-v1'){applicationConfigReady=true;resolve(r)}else reject(Error('Apps Script ใบสมัครยังไม่รองรับลายเซ็น กรุณาให้ HR ติดตั้ง Application_Backend_R12_2.gs และ Deploy New version ก่อนส่ง'))};s.src=GAS_WEB_APP_URL+'?action=applicationConfig&callback='+cb;s.onerror=function(){end();reject(Error('ตรวจระบบใบสมัครไม่ได้ กรุณาตรวจการเชื่อมต่อแล้วลองใหม่'))};timer=setTimeout(function(){end();reject(Error('รอตรวจระบบใบสมัครนานเกินไป กรุณาลองใหม่'))},15000);document.body.appendChild(s)})}
-function applicationFrameRequest(params,timeoutMs){return new Promise(function(resolve,reject){var token=applicationRandom()+applicationRandom(),id='applicationReceipt'+token,frame=document.createElement('iframe'),f=document.createElement('form'),timer;frame.name=id;frame.title='รับเลขยืนยันใบสมัคร';frame.style.display='none';f.style.display='none';f.method='POST';f.action=GAS_WEB_APP_URL;f.target=id;var p=new URLSearchParams(params);p.set('reply_mode','iframe');p.set('receipt_token',token);p.set('reply_origin',location.origin);p.forEach(function(v,k){var el=document.createElement('input');el.type='hidden';el.name=k;el.value=v;f.appendChild(el)});function cleanup(){clearTimeout(timer);window.removeEventListener('message',receive);f.remove();frame.remove()}function receive(e){var o=e.data;if(!o||o.type!=='tantatat-application-receipt'||o.receiptToken!==token||!/^https:\/\/(?:[a-z0-9-]+\.)*(?:googleusercontent\.com|script\.google\.com)$/i.test(e.origin))return;cleanup();resolve(o.result)}window.addEventListener('message',receive);timer=setTimeout(function(){cleanup();reject(Error('ยังไม่ได้รับเลขยืนยัน ข้อมูลและลายเซ็นยังอยู่ กรุณากดส่งอีกครั้งโดยไม่กรอกใหม่ ระบบใช้รหัสเดิมเพื่อป้องกันรายการซ้ำ'))},timeoutMs||45000);document.body.append(frame,f);HTMLFormElement.prototype.submit.call(f)})}
-async function applicationRequest(params){var p=new URLSearchParams(params),r;try{var controller=new AbortController(),timer=setTimeout(function(){controller.abort()},15000);try{var response=await fetch(GAS_WEB_APP_URL,{method:'POST',body:p,signal:controller.signal});r=await response.json()}finally{clearTimeout(timer)}}catch(e){r=await applicationFrameRequest(p)}if(!r||r.release!=='R12.2-APPLICATION-SSO')throw Error('ตัวบันทึกใบสมัครไม่ตรงรุ่น กรุณาติดต่อ HR');if(r.status!=='ok')throw Error(r.message||'บันทึกใบสมัครไม่สำเร็จ');return r}
+function applicationConfig(){return new Promise(function(resolve,reject){var cb='appSigCb'+Date.now()+Math.random().toString(36).slice(2),s=document.createElement('script'),timer;function end(){clearTimeout(timer);s.remove();delete window[cb]}window[cb]=function(r){end();if(r&&r.release==='R12.3-APPLICATION-RESTORED'&&r.policyVersion==='application-signatures-2026-11-17-v1'){applicationConfigReady=true;resolve(r)}else reject(Error('Apps Script ใบสมัครยังไม่รองรับลายเซ็น กรุณาให้ HR ติดตั้ง Application_Backend_R12_3.gs และ Deploy New version ก่อนส่ง'))};s.src=GAS_WEB_APP_URL+'?action=applicationConfig&callback='+cb;s.onerror=function(){end();reject(Error('ตรวจระบบใบสมัครไม่ได้ กรุณาตรวจการเชื่อมต่อแล้วลองใหม่'))};timer=setTimeout(function(){end();reject(Error('รอตรวจระบบใบสมัครนานเกินไป กรุณาลองใหม่'))},15000);document.body.appendChild(s)})}
+function applicationFrameRequest(params,timeoutMs){return new Promise(function(resolve,reject){var token=applicationRandom()+applicationRandom(),id='applicationReceipt'+token,frame=document.createElement('iframe'),f=document.createElement('form'),timer;frame.name=id;frame.title='รับเลขยืนยันใบสมัคร';frame.style.display='none';f.style.display='none';f.method='POST';f.action=GAS_WEB_APP_URL;f.target=id;var p=new URLSearchParams(params);p.set('reply_mode','iframe');p.set('receipt_token',token);p.set('reply_origin',applicationReplyOrigin());p.forEach(function(v,k){var el=document.createElement('input');el.type='hidden';el.name=k;el.value=v;f.appendChild(el)});function cleanup(){clearTimeout(timer);window.removeEventListener('message',receive);f.remove();frame.remove()}function receive(e){var o=e.data;if(!o||o.type!=='tantatat-application-receipt'||o.receiptToken!==token||!/^https:\/\/(?:[a-z0-9-]+\.)*(?:googleusercontent\.com|script\.google\.com)$/i.test(e.origin))return;cleanup();resolve(o.result)}window.addEventListener('message',receive);timer=setTimeout(function(){cleanup();reject(Error(p.get('action')==='applicationHRRead'?'หมดเวลารอข้อมูลใบสมัคร กรุณาตรวจ deployment ของ Apps Script ใบสมัคร':'ยังไม่ได้รับเลขยืนยัน ข้อมูลและลายเซ็นยังอยู่ กรุณากดส่งอีกครั้งโดยไม่กรอกใหม่ ระบบใช้รหัสเดิมเพื่อป้องกันรายการซ้ำ'))},timeoutMs||45000);document.body.append(frame,f);HTMLFormElement.prototype.submit.call(f)})}
+async function applicationRequest(params){var p=new URLSearchParams(params),r;try{var controller=new AbortController(),timer=setTimeout(function(){controller.abort()},15000);try{var response=await fetch(GAS_WEB_APP_URL,{method:'POST',body:p,signal:controller.signal});r=await response.json()}finally{clearTimeout(timer)}}catch(e){r=await applicationFrameRequest(p)}if(!r||r.release!=='R12.3-APPLICATION-RESTORED')throw Error('ตัวบันทึกใบสมัครไม่ตรงรุ่น กรุณาติดต่อ HR');if(r.status!=='ok')throw Error(r.message||'บันทึกใบสมัครไม่สำเร็จ');return r}
 function applicationSubmit(ev){ev.preventDefault();if(applicationSending)return;if(!form.checkValidity())return;if(!document.getElementById('photoData').value){msg.style.color='#dc2626';msg.textContent='กรุณาอัปโหลดรูปถ่ายผู้สมัคร';return}var params=new URLSearchParams(new FormData(form));params.set('signature_policy_version','application-signatures-2026-11-17-v1');var compare=[];params.forEach(function(v,k){if(!/_at$/.test(k))compare.push([k,v])});var key=JSON.stringify(compare);if(!applicationPending||applicationPending.key!==key){params.set('application_submission_id','APP-'+applicationRandom());applicationPending={key:key,params:params}}params=applicationPending.params;applicationSending=true;var buttons=Array.from(form.querySelectorAll('button')),controls=Array.from(form.querySelectorAll('input,select,textarea'));buttons.forEach(function(b){b.disabled=true});controls.forEach(function(c){c.dataset.appDisabled=c.disabled?'1':'0';c.disabled=true});msg.style.color='#0f766e';msg.textContent='กำลังบันทึกใบสมัครและลายเซ็น กรุณารอเลขยืนยัน…';(async function(){try{if(!applicationConfigReady)await applicationConfig();var r=await applicationRequest(params);if(r.id!==params.get('application_submission_id'))throw Error('เลขยืนยันไม่ตรงกับใบสมัคร จึงยังไม่ล้างข้อมูล กรุณาติดต่อ HR');msg.style.color='#0f766e';msg.textContent='ส่งใบสมัครและลายเซ็นสำเร็จ · เลขรับ '+r.id;applicationPending=null;form.reset();document.getElementById('curAddr').style.display='none';toggleOL(false);if(form_reset_hook)form_reset_hook()}catch(e){msg.style.color='#b91c1c';msg.textContent=e.message+' · ข้อมูลยังไม่ถูกล้าง'}finally{applicationSending=false;buttons.forEach(function(b){b.disabled=false});controls.forEach(function(c){c.disabled=c.dataset.appDisabled==='1';delete c.dataset.appDisabled})}})()}
 function applicationMasterToken(){try{if(parent!==window&&parent.HRU&&parent.HRU.token&&parent.HRU.user&&parent.HRU.user.role==='TA'&&typeof parent.hrCan==='function'&&parent.hrCan('apply'))return parent.HRU.token}catch(e){}return ''}
 function doLogin(){showHR()}
@@ -1306,10 +1264,18 @@ async function loadData(){
   var r=await applicationFrameRequest(new URLSearchParams({action:'applicationHRRead',token:token}),90000);
   if(seq!==applicationHRLoadSequence)return;
   if(applicationMasterToken()!==token){ALL=[];VIEW=[];CUR=null;showLogin();return;}
-  if(!r||r.release!=='R12.2-APPLICATION-SSO')throw Error('Apps Script ใบสมัครยังไม่ตรงกับ Index R12.2 กรุณาอัปเดตทั้งสองไฟล์');
+  if(!r||r.release!=='R12.3-APPLICATION-RESTORED')throw Error('Apps Script ใบสมัครยังไม่ตรงกับ Index R12.3 กรุณาอัปเดตทั้งสองไฟล์');
   if(r.status!=='ok')throw Error(r.message||'โหลดใบสมัครไม่สำเร็จ');
   handle(r);
  }catch(e){if(seq===applicationHRLoadSequence)setStatus('โหลดใบสมัครไม่สำเร็จ: '+e.message+' · กดโหลดข้อมูลใหม่เพื่อลองอีกครั้ง');}
 }
 function fetchFallback(){return loadData()}
+
+function applicationReplyOrigin(){
+ if(/^https?:\/\//.test(location.origin))return location.origin;
+ try{if(parent!==window&&/^https?:\/\//.test(parent.location.origin))return parent.location.origin}catch(e){}
+ if(location.origin==='null')return 'null';
+ throw Error('ไม่พบที่อยู่เว็บสำหรับรับผลตอบกลับ');
+}
+if(applicationMasterToken())showHR();
 </script></body></html>
